@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -40,16 +41,16 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: 'California Supply Chain Act', href: '#supply-chain' },
+    { name: 'Uttarakhand Supply Chain', href: '#supply-chain' },
     { name: 'Privacy Policy', href: '#privacy' },
     { name: 'DO NOT SELL OR SHARE MY PERSONAL INFORMATION', href: '#do-not-sell' },
     { name: 'Manage Consent Preferences', href: '#consent' }
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#facebook', icon: 'f' },
-    { name: 'Instagram', href: '#instagram', icon: '📷' },
-    { name: 'LinkedIn', href: '#linkedin', icon: 'in' }
+    { name: 'Facebook', href: '#facebook', icon: <FaFacebook /> },
+    { name: 'Instagram', href: '#instagram', icon: <FaInstagram /> },
+    { name: 'LinkedIn', href: '#linkedin', icon: <FaLinkedin /> }
   ];
 
   const handleNewsletterSubmit = (e) => {
@@ -106,7 +107,7 @@ const Footer = () => {
                 Premium quality poultry products since 2020. Committed to sustainable farming practices 
                 and delivering farm-fresh goodness to families everywhere.
               </p>
-              <div className="footer__brand-social">
+              {/* <div className="footer__brand-social">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
@@ -117,7 +118,7 @@ const Footer = () => {
                     <span className="footer__social-icon">{social.icon}</span>
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
