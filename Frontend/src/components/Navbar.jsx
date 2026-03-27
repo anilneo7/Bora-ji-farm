@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 import logoImage from '../assets/Bora ji farmlogo.png';
 import './Navbar.css';
@@ -7,10 +8,10 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'PRODUCTS', href: '#products' },
-    { name: 'RECIPES', href: '#recipes' },
-    { name: 'BLOG', href: '#blog' },
-    { name: 'OUR STORY', href: '#our-story' }
+    { name: 'PRODUCTS', href: '/products' },
+    { name: 'RECIPES', href: '/#recipes' },
+    { name: 'BLOG', href: '/#blog' },
+    { name: 'OUR STORY', href: '/#our-story' }
   ];
 
   const toggleMobileMenu = () => {
@@ -21,24 +22,30 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         <div className="navbar__brand">
-          <div className="navbar__logo">
-            <div className="navbar__rooster">
-              <img src={logoImage} alt="BORA JI FARMS" className="navbar__logo-img" />
-            </div>
-            <div className="navbar__brand-text">
-              <h1 className="navbar__brand-name">BORA JI FARMS</h1>
-              <a href="#home" className="navbar__home-link">Home</a>
-            </div>
-          </div>
+            <Link to="/" className="navbar__brand-link">
+              <div className="navbar__rooster">
+                <img src={logoImage} alt="BORA JI FARMS" className="navbar__logo-img" />
+              </div>
+              <div className="navbar__brand-text">
+                <h1 className="navbar__brand-name">BORA JI FARMS</h1>
+                <span className="navbar__home-link">Home</span>
+              </div>
+            </Link>
         </div>
 
         <div className={`navbar__menu ${isMobileMenuOpen ? 'navbar__menu--open' : ''}`}>
           <ul className="navbar__nav-links">
             {navLinks.map((link) => (
               <li key={link.name} className="navbar__nav-item">
-                <a href={link.href} className="navbar__nav-link">
-                  {link.name}
-                </a>
+                {link.href.startsWith('/') && !link.href.includes('#') ? (
+                  <Link to={link.href} className="navbar__nav-link">
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a href={link.href} className="navbar__nav-link">
+                    {link.name}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

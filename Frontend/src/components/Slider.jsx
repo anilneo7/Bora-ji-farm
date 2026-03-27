@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import './Slider.css';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
   
   const slides = [
     {
@@ -70,7 +72,17 @@ const Slider = () => {
                   <Button 
                     variant="primary" 
                     size="large"
-                    onClick={() => console.log(`${slide.buttonText} clicked`)}
+                    onClick={() => {
+                      if (slide.buttonText === 'EXPLORE PRODUCTS') {
+                        navigate('/products');
+                      } else if (slide.buttonText === 'OUR STORY') {
+                        navigate('/#our-story');
+                      } else if (slide.buttonText === 'VIEW RECIPES') {
+                        navigate('/#recipes');
+                      } else {
+                        console.log(`${slide.buttonText} clicked`);
+                      }
+                    }}
                   >
                     {slide.buttonText}
                   </Button>

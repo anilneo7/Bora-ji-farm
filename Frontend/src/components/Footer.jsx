@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
   const topLinks = [
-    { name: 'FOODSERVICE', href: '#foodservice' },
-    { name: 'NEWS', href: '#news' },
-    { name: 'JOBS', href: '#jobs' },
-    { name: 'CONTACT US', href: '#contact' }
+    { name: 'FOODSERVICE', href: '/#foodservice' },
+    { name: 'NEWS', href: '/#news' },
+    { name: 'JOBS', href: '/#jobs' },
+    { name: 'CONTACT US', href: '/#contact' }
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Recipes', href: '#recipes' },
-    { name: 'Sustainability', href: '#sustainability' }
+    { name: 'About Us', href: '/#about' },
+    { name: 'Products', href: '/products' },
+    { name: 'Recipes', href: '/#recipes' },
+    { name: 'Sustainability', href: '/#sustainability' }
   ];
 
   const supportLinks = [
@@ -67,9 +68,15 @@ const Footer = () => {
             <ul className="footer__nav-list">
               {topLinks.map((link) => (
                 <li key={link.name} className="footer__nav-item">
-                  <a href={link.href} className="footer__nav-link">
-                    {link.name}
-                  </a>
+                  {link.href.startsWith('/') && !link.href.includes('#') ? (
+                    <Link to={link.href} className="footer__nav-link">
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="footer__nav-link">
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -127,9 +134,15 @@ const Footer = () => {
               <ul className="footer__section-list">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="footer__section-link">
-                      {link.name}
-                    </a>
+                    {link.href.startsWith('/') && !link.href.includes('#') ? (
+                      <Link to={link.href} className="footer__section-link">
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a href={link.href} className="footer__section-link">
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

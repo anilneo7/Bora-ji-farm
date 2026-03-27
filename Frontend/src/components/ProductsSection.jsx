@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { FaMapMarkerAlt, FaClock, FaPhone, FaMap } from 'react-icons/fa';
 import './ProductsSection.css';
 
 const ProductsSection = () => {
+  const navigate = useNavigate();
   const products = [
     {
       id: 1,
@@ -38,7 +40,7 @@ const ProductsSection = () => {
               <Button 
                 variant="primary" 
                 size="large"
-                onClick={() => console.log('View all products clicked')}
+                onClick={() => navigate('/products')}
                 className="products-section__main-button"
               >
                 VIEW ALL PRODUCTS
