@@ -28,7 +28,6 @@ const Navbar = () => {
               </div>
               <div className="navbar__brand-text">
                 <h1 className="navbar__brand-name">BORA JI FARMS</h1>
-                <span className="navbar__home-link">Home</span>
               </div>
             </Link>
         </div>
@@ -52,9 +51,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__actions">
-          <Button variant="primary" size="medium" onClick={() => console.log('Where to buy clicked')}>
+          {/* <Button variant="primary" size="medium" onClick={() => console.log('Where to buy clicked')}>
             WHERE TO BUY
-          </Button>
+          </Button> */}
           <button className="navbar__search-btn" onClick={() => console.log('Search clicked')}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <circle cx="8" cy="8" r="6" stroke="#333" strokeWidth="2"/>

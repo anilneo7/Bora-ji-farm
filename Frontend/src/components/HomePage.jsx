@@ -7,10 +7,39 @@ import { useNavigate } from 'react-router-dom'
 function HomePage() {
   const navigate = useNavigate();
 
+  const handleVisitStore = () => {
+    const element = document.getElementById('location-card');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Remove class if already exists to restart animation
+      element.classList.remove('location-section__detail-item--highlight');
+      
+      // Force reflow
+      void element.offsetWidth;
+      
+      // Add the highlight class
+      element.classList.add('location-section__detail-item--highlight');
+      
+      // Remove class after animation ends (3000ms)
+      setTimeout(() => {
+        element.classList.remove('location-section__detail-item--highlight');
+      }, 2000);
+    }
+  };
+
   return (
     <>
       <main className="main-content">
         <section className="brand-hero">
+          {/* Background Bubbles */}
+          <div className="background-bubbles">
+            <div className="bubble bubble--1"></div>
+            <div className="bubble bubble--2"></div>
+            <div className="bubble bubble--3"></div>
+            <div className="bubble bubble--4"></div>
+            <div className="bubble bubble--5"></div>
+          </div>
           <div className="brand-hero__container">
             <div className="brand-hero__logo">
               <img src={brandLogo} alt="BORA JI FARMS" className="brand-hero__logo-img" />
@@ -32,8 +61,11 @@ function HomePage() {
                 >
                   EXPLORE PRODUCTS
                 </button>
-                <button className="brand-hero__btn secondary">
-                  LEARN MORE
+                <button 
+                  className="brand-hero__btn secondary"
+                  onClick={handleVisitStore}
+                >
+                  VISIT STORE
                 </button>
               </div>
             </div>

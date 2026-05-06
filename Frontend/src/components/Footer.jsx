@@ -44,7 +44,7 @@ const Footer = () => {
   const legalLinks = [
     { name: 'Uttarakhand Supply Chain', href: '#supply-chain' },
     { name: 'Privacy Policy', href: '#privacy' },
-    { name: 'DO NOT SELL OR SHARE MY PERSONAL INFORMATION', href: '#do-not-sell' },
+    { name: 'DO NOT SELL OR SHARE MY PERSONAL INFORMATION' },
     { name: 'Manage Consent Preferences', href: '#consent' }
   ];
 
@@ -195,6 +195,18 @@ const Footer = () => {
 
           <div className="footer__copyright">
             <p>© 2026 BORA JI FARMS. All Rights Reserved.</p>
+          </div>
+
+          <div className="footer__creator">
+            <span className="footer__creator-text">Created by</span>
+            <a 
+              href="https://www.linkedin.com/in/anil-mehra-engineer/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="footer__creator-link"
+            >
+              ANIL MEHRA <FaLinkedin className="footer__creator-icon" />
+            </a>
           </div>
 
           <div className="footer__social">
