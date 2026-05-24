@@ -22,14 +22,14 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         <div className="navbar__brand">
-            <Link to="/" className="navbar__brand-link">
-              <div className="navbar__rooster">
-                <img src={logoImage} alt="BORA JI FARMS" className="navbar__logo-img" />
-              </div>
-              <div className="navbar__brand-text">
-                <h1 className="navbar__brand-name">BORA JI FARMS</h1>
-              </div>
-            </Link>
+          <Link to="/" className="navbar__brand-link">
+            <div className="navbar__rooster">
+              <img src={logoImage} alt="BORA JI FARMS" className="navbar__logo-img" />
+            </div>
+            <div className="navbar__brand-text">
+              <h1 className="navbar__brand-name">BORA JI FARMS</h1>
+            </div>
+          </Link>
         </div>
 
         <div className={`navbar__menu ${isMobileMenuOpen ? 'navbar__menu--open' : ''}`}>
@@ -56,12 +56,12 @@ const Navbar = () => {
           </Button> */}
           <button className="navbar__search-btn" onClick={() => console.log('Search clicked')}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="8" cy="8" r="6" stroke="#333" strokeWidth="2"/>
-              <path d="M13 13 L18 18" stroke="#333" strokeWidth="2" strokeLinecap="round"/>
+              <circle cx="8" cy="8" r="6" stroke="#333" strokeWidth="2" />
+              <path d="M13 13 L18 18" stroke="#333" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
-          <button 
-            className="navbar__mobile-toggle" 
+          <button
+            className="navbar__mobile-toggle"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >

@@ -6,9 +6,27 @@ import './Footer.css';
 const Footer = () => {
   const topLinks = [
     { name: 'FOODSERVICE', href: '/#foodservice' },
-    { name: 'NEWS', href: '/#news' },
-    { name: 'JOBS', href: '/#jobs' },
-    { name: 'CONTACT US', href: '/#contact' }
+    { name: 'FACTS', href: 'https://en.wikipedia.org/wiki/Eggs_as_food' },
+    {
+      name: 'JOBS',
+      href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+        const phoneNumber = "918700304693";
+        const message = "Hello Bora Ji Farms! I am interested in joining your team. Could you please share more details about current job openings?";
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+      }
+    },
+    {
+      name: 'CONTACT US',
+      href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+        const phoneNumber = "918700304693";
+        const message = "Hello Bora Ji Farms! I would like to inquire about your products.";
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+      }
+    }
   ];
 
   const quickLinks = [
@@ -68,12 +86,16 @@ const Footer = () => {
             <ul className="footer__nav-list">
               {topLinks.map((link) => (
                 <li key={link.name} className="footer__nav-item">
-                  {link.href.startsWith('/') && !link.href.includes('#') ? (
-                    <Link to={link.href} className="footer__nav-link">
+                  {link.onClick ? (
+                    <a href={link.href || '#'} onClick={link.onClick} className="footer__nav-link">
+                      {link.name}
+                    </a>
+                  ) : link.href.startsWith('/') && !link.href.includes('#') ? (
+                    <Link to={link.href} target="_blank" rel="noopener noreferrer" className="footer__nav-link">
                       {link.name}
                     </Link>
                   ) : (
-                    <a href={link.href} className="footer__nav-link">
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__nav-link">
                       {link.name}
                     </a>
                   )}
@@ -111,7 +133,7 @@ const Footer = () => {
                 <span className="footer__brand-logo-text">BORA JI FARMS</span>
               </div>
               <p className="footer__brand-description">
-                Premium quality poultry products since 2020. Committed to sustainable farming practices 
+                Premium quality poultry products since 2020. Committed to sustainable farming practices
                 and delivering farm-fresh goodness to families everywhere.
               </p>
               {/* <div className="footer__brand-social">
@@ -135,11 +157,11 @@ const Footer = () => {
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('/') && !link.href.includes('#') ? (
-                      <Link to={link.href} className="footer__section-link">
+                      <Link to={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
                         {link.name}
                       </Link>
                     ) : (
-                      <a href={link.href} className="footer__section-link">
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
                         {link.name}
                       </a>
                     )}
@@ -154,7 +176,7 @@ const Footer = () => {
               <ul className="footer__section-list">
                 {supportLinks.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="footer__section-link">
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
                       {link.name}
                     </a>
                   </li>
@@ -168,7 +190,7 @@ const Footer = () => {
               <ul className="footer__section-list">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="footer__section-link">
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
                       {link.name}
                     </a>
                   </li>
@@ -199,9 +221,9 @@ const Footer = () => {
 
           <div className="footer__creator">
             <span className="footer__creator-text">Created by</span>
-            <a 
-              href="https://www.linkedin.com/in/anil-mehra-engineer/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/anil-mehra-engineer/"
+              target="_blank"
               rel="noopener noreferrer"
               className="footer__creator-link"
             >

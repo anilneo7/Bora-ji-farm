@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
 import Button from './Button';
-import { FaShoppingCart, FaStar, FaTruck } from 'react-icons/fa';
+import { FaStar, FaTruck, FaLeaf, FaWhatsapp, FaStore } from 'react-icons/fa';
 import './ProductsPage.css';
 
 const ProductsPage = () => {
@@ -11,8 +10,7 @@ const ProductsPage = () => {
   const categories = [
     { id: 'all', name: 'All Products' },
     { id: 'eggs', name: 'Fresh Eggs' },
-    { id: 'chicken', name: 'Poultry' },
-    { id: 'organic', name: 'Organic' }
+    { id: 'chicken', name: 'Poultry' }
   ];
 
   const products = [
@@ -21,66 +19,66 @@ const ProductsPage = () => {
       name: 'FRESH EGGS',
       category: 'eggs',
       description: 'Premium quality farm-fresh eggs from free-range chickens',
-      price: '$4.99/dozen',
-      image: '/src/assets/eggphoto.jpg',
+      price: '₹60/dozen',
+      image: '/src/assets/FRESH_EGGS.jpg',
       rating: 4.8,
       inStock: true,
       badge: 'BESTSELLER'
     },
     {
       id: 2,
-      name: 'FREE CHICKEN',
+      name: 'BROILER CHICKEN',
       category: 'chicken',
-      description: 'Farm-fresh chicken, naturally raised without antibiotics',
-      price: '$8.99/lb',
-      image: '/src/assets/chicken.jpg',
-      rating: 4.6,
+      description: 'High-quality broiler chicken, tender and perfect for roasting or grilling',
+      price: '₹150/kg',
+      image: '/src/assets/Broiler_chicken.jpg',
+      rating: 4.7,
       inStock: true,
-      badge: 'PREMIUM'
+      badge: 'FRESH'
     },
     {
       id: 3,
       name: 'ORGANIC EGGS',
       category: 'eggs',
       description: 'Certified organic eggs from pasture-raised chickens',
-      price: '$6.99/dozen',
-      image: '/src/assets/eggphoto.jpg',
+      price: '₹80/dozen',
+      image: '/src/assets/FRESH_EGGS.jpg',
       rating: 4.9,
       inStock: true,
       badge: 'ORGANIC'
     },
     {
       id: 4,
-      name: 'HERB-ROASTED CHICKEN',
+      name: 'LAYER CHICKEN',
       category: 'chicken',
-      description: 'Premium herb-roasted whole chicken with herbs and spices',
-      price: '$12.99/each',
-      image: '/src/assets/chicken.jpg',
-      rating: 4.7,
-      inStock: false,
-      badge: 'OUT OF STOCK'
+      description: 'Farm-raised layer chicken, ideal for traditional recipes and soup stocks',
+      price: '₹200/each',
+      image: '/src/assets/layer_chicken.jpg',
+      rating: 4.5,
+      inStock: true,
+      badge: 'POPULAR'
     },
     {
       id: 5,
       name: 'BROWN EGGS',
       category: 'eggs',
       description: 'Nutrient-rich brown eggs from heritage breed chickens',
-      price: '$5.49/dozen',
-      image: '/src/assets/eggphoto.jpg',
+      price: '₹75/dozen',
+      image: '/src/assets/BROWN_EGGS.jpg',
       rating: 4.5,
       inStock: true,
       badge: 'HERITAGE'
     },
     {
       id: 6,
-      name: 'GRILLED CHICKEN BREAST',
+      name: 'KADAKNATH CHICKEN',
       category: 'chicken',
-      description: 'Tender grilled chicken breast, perfect for healthy meals',
-      price: '$9.99/lb',
-      image: '/src/assets/chicken.jpg',
-      rating: 4.8,
+      description: 'Famous black chicken breed, highly valued for its rich nutritional and medicinal qualities',
+      price: '₹550/each',
+      image: '/src/assets/Kadaknath_chicken.jpg',
+      rating: 4.9,
       inStock: true,
-      badge: 'LEAN'
+      badge: 'EXOTIC'
     }
   ];
 
@@ -88,13 +86,15 @@ const ProductsPage = () => {
     ? products 
     : products.filter(product => product.category === selectedCategory);
 
-  const handleAddToCart = (product) => {
-    console.log(`Added ${product.name} to cart`);
+  const handleInquiry = (product) => {
+    const whatsappNumber = '918700304693';
+    const message = encodeURIComponent(`Hi, I'm interested in ${product.name}. Is it available?`);
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
   return (
     <div className="products-page">
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Breadcrumb Navigation */}
       <nav className="products-page__breadcrumb">
@@ -119,7 +119,10 @@ const ProductsPage = () => {
               </p>
             </div>
             <div className="products-page__hero-image">
-              <div className="products-page__hero-bubble"></div>
+              <div className="products-page__hero-glass-card">
+                <FaLeaf className="products-page__hero-glass-icon" />
+                <span className="products-page__hero-glass-text">100% Organic Farm</span>
+              </div>
             </div>
           </div>
         </section>
@@ -145,6 +148,9 @@ const ProductsPage = () => {
         {/* Products Grid */}
         <section className="products-page__products">
           <div className="products-page__products-container">
+            <p className="products-page__disclaimer">
+              * Note: The prices listed below are approximate and may vary. Please confirm the final price when making an inquiry on WhatsApp.
+            </p>
             <div className="products-page__products-grid">
               {filteredProducts.map((product) => (
                 <div key={product.id} className="products-page__product-card">
@@ -167,7 +173,7 @@ const ProductsPage = () => {
                     
                     <div className="products-page__product-meta">
                       <div className="products-page__product-price">
-                        <span className="products-page__price-label">Price:</span>
+                        <span className="products-page__price-label">Price</span>
                         <span className="products-page__price-value">{product.price}</span>
                       </div>
                       
@@ -179,16 +185,13 @@ const ProductsPage = () => {
                     </div>
                     
                     <div className="products-page__product-actions">
-                      <Button 
-                        variant="primary" 
-                        size="small"
-                        onClick={() => handleAddToCart(product)}
-                        disabled={!product.inStock}
-                        className="products-page__add-to-cart"
+                      <button
+                        className="products-page__inquiry-btn"
+                        onClick={() => handleInquiry(product)}
                       >
-                        <FaShoppingCart className="products-page__cart-icon" />
-                        Add to Cart
-                      </Button>
+                        <FaWhatsapp className="products-page__btn-icon" />
+                        Inquire on WhatsApp
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -224,7 +227,7 @@ const ProductsPage = () => {
               
               <div className="products-page__feature-card">
                 <div className="products-page__feature-icon">
-                  <FaShoppingCart />
+                  <FaStore />
                 </div>
                 <h3 className="products-page__feature-title">Farm Fresh</h3>
                 <p className="products-page__feature-description">
@@ -235,8 +238,6 @@ const ProductsPage = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
