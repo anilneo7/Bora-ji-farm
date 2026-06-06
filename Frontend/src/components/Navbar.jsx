@@ -54,12 +54,6 @@ const Navbar = () => {
           {/* <Button variant="primary" size="medium" onClick={() => console.log('Where to buy clicked')}>
             WHERE TO BUY
           </Button> */}
-          <button className="navbar__search-btn" onClick={() => console.log('Search clicked')}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="8" cy="8" r="6" stroke="#333" strokeWidth="2" />
-              <path d="M13 13 L18 18" stroke="#333" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </button>
           <button
             className="navbar__mobile-toggle"
             onClick={toggleMobileMenu}

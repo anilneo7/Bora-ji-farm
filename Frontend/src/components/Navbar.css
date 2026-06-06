@@ -26,10 +26,11 @@
   flex-shrink: 0;
 }
 
-.navbar__logo {
+.navbar__brand-link {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
 }
 
 .navbar__rooster {
@@ -239,7 +240,7 @@
 }
 
 @media (max-width: 480px) {
-  .navbar__logo {
+  .navbar__brand-link {
     gap: 8px;
   }
 

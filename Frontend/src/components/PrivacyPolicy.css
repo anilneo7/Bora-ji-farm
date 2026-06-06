@@ -1,0 +1,138 @@
+.privacy-page {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.privacy-page__header {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2064&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.privacy-page__header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.privacy-page__header-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.privacy-page__header-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 1px;
+}
+
+.privacy-page__header-content p {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.privacy-page__container {
+  max-width: 800px;
+  margin: -40px auto 0;
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 3;
+}
+
+.privacy-page__section {
+  margin-bottom: 40px;
+}
+
+.privacy-page__section:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-page__section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #D2691E; /* Primary brand color */
+  display: inline-block;
+}
+
+.privacy-page__section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.privacy-page__section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.privacy-page__section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.privacy-page__section li strong {
+  color: #333;
+}
+
+.privacy-page__contact-info {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #D2691E;
+  margin-top: 20px;
+}
+
+.privacy-page__contact-info p {
+  margin-bottom: 5px;
+}
+
+.privacy-page__contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .privacy-page__header {
+    height: 200px;
+  }
+
+  .privacy-page__header-content h1 {
+    font-size: 32px;
+  }
+
+  .privacy-page__container {
+    margin: -20px 15px 0;
+    padding: 30px 20px;
+  }
+
+  .privacy-page__section h2 {
+    font-size: 20px;
+  }
+
+  .privacy-page__section p, 
+  .privacy-page__section li {
+    font-size: 15px;
+  }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
   const topLinks = [
-    { name: 'FOODSERVICE', href: '/#foodservice' },
+    // { name: 'FOODSERVICE', href: '/#foodservice' },
     { name: 'FACTS', href: 'https://en.wikipedia.org/wiki/Eggs_as_food' },
     {
       name: 'JOBS',
@@ -60,9 +60,8 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: 'Uttarakhand Supply Chain', href: '#supply-chain' },
-    { name: 'Privacy Policy', href: '#privacy' },
-    { name: 'DO NOT SELL OR SHARE MY PERSONAL INFORMATION' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'WE DO NOT SELL OR SHARE YOUR PERSONAL INFORMATION' },
     { name: 'Manage Consent Preferences', href: '#consent' }
   ];
 
@@ -74,7 +73,11 @@ const Footer = () => {
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    console.log('Newsletter subscription submitted');
+    const query = e.target.elements.whatsappQuery.value;
+    const phoneNumber = "918700304693";
+    const message = `Hello Bora Ji Farms! ${query}`;
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    e.target.reset();
   };
 
   return (
@@ -107,98 +110,22 @@ const Footer = () => {
 
         {/* Newsletter Section */}
         <div className="footer__newsletter">
-          <h3 className="footer__newsletter-title">Stay Connected</h3>
+          <h3 className="footer__newsletter-title">Send a Query</h3>
           <p className="footer__newsletter-description">
-            Get exclusive recipes, product updates, and special offers delivered to your inbox
+            Have questions about our products? Send us a direct message on WhatsApp!
           </p>
           <form className="footer__newsletter-form" onSubmit={handleNewsletterSubmit}>
             <input
-              type="email"
-              placeholder="Enter your email"
+              type="text"
+              id="whatsappQuery"
+              placeholder="Enter your query here"
               className="footer__newsletter-input"
               required
             />
             <button type="submit" className="footer__newsletter-button">
-              SUBSCRIBE
+              <FaWhatsapp style={{ fontSize: '1.2rem' }} /> SEND VIA WHATSAPP
             </button>
           </form>
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="footer__middle">
-          <div className="footer__content-grid">
-            {/* Brand Section */}
-            <div className="footer__brand-section">
-              <div className="footer__brand-logo">
-                <span className="footer__brand-logo-text">BORA JI FARMS</span>
-              </div>
-              <p className="footer__brand-description">
-                Premium quality poultry products since 2020. Committed to sustainable farming practices
-                and delivering farm-fresh goodness to families everywhere.
-              </p>
-              {/* <div className="footer__brand-social">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="footer__social-link"
-                    aria-label={social.name}
-                  >
-                    <span className="footer__social-icon">{social.icon}</span>
-                  </a>
-                ))}
-              </div> */}
-            </div>
-
-            {/* Quick Links */}
-            <div className="footer__section">
-              <h3 className="footer__section-title">Quick Links</h3>
-              <ul className="footer__section-list">
-                {quickLinks.map((link) => (
-                  <li key={link.name}>
-                    {link.href.startsWith('/') && !link.href.includes('#') ? (
-                      <Link to={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
-                        {link.name}
-                      </Link>
-                    ) : (
-                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
-                        {link.name}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div className="footer__section">
-              <h3 className="footer__section-title">Support</h3>
-              <ul className="footer__section-list">
-                {supportLinks.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div className="footer__section">
-              <h3 className="footer__section-title">Company</h3>
-              <ul className="footer__section-list">
-                {companyLinks.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="footer__section-link">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
         </div>
 
         {/* Bottom Section */}
@@ -207,9 +134,15 @@ const Footer = () => {
             <ul className="footer__legal-list">
               {legalLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="footer__legal-link">
-                    {link.name}
-                  </a>
+                  {link.href && link.href.startsWith('/') ? (
+                    <Link to={link.href} className="footer__legal-link">
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="footer__legal-link">
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
