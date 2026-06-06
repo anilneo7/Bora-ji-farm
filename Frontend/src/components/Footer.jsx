@@ -62,7 +62,6 @@ const Footer = () => {
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'WE DO NOT SELL OR SHARE YOUR PERSONAL INFORMATION' },
-    { name: 'Manage Consent Preferences', href: '#consent' }
   ];
 
   const socialLinks = [
