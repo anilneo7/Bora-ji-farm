@@ -42,7 +42,7 @@ const ProductsPage = () => {
       category: 'eggs',
       description: 'Certified organic eggs from pasture-raised chickens',
       price: '₹80/dozen',
-      image: '/src/assets/FRESH_EGGS.jpg',
+      image: '/src/assets/eggphoto.jpg',
       rating: 4.9,
       inStock: true,
       badge: 'ORGANIC'

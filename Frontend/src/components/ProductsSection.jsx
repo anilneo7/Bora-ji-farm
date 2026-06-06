@@ -19,7 +19,7 @@ const ProductsSection = () => {
     {
       id: 2,
       category: 'FRESH CHICKEN',
-      name: 'Whole Broiler Chicken',
+      name: 'Fresh Whole Chicken',
       description: 'Hygienically processed, tender, and naturally raised chicken.',
       price: '₹220 / Kg',
       image: '/src/assets/chicken.jpg',
@@ -127,7 +127,7 @@ const ProductsSection = () => {
                   </div>
                   <div className="location-detail-card__info">
                     <h3>Our Location</h3>
-                    <p>10 Mins from Someshwar Market, Uttarakhand</p>
+                    <p>5 Mins from Someshwar Market, Uttarakhand</p>
                     <a href="https://maps.app.goo.gl/b7o1xnpL4JCS4eub8" target="_blank" rel="noopener noreferrer" className="location-link">
                       Get Directions <FaMap />
                     </a>
@@ -178,7 +178,7 @@ const ProductsSection = () => {
                 <div className="map-experience-card__image">
                   {/* This would ideally be a static map image or a beautiful farm photo */}
                   {/* <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000" alt="Farm Overview" /> */}
-                  <img src="./src/assets/farm-overview.png" alt="Farm Overview" />
+                  <img src="./src/assets/farm_image.PNG" alt="Farm Overview" />
                   <div className="map-experience-card__overlay">
                     <div className="ping-container">
                       <div className="ping"></div>
