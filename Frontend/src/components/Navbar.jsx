@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import logoImage from '../assets/Bora ji farmlogo.png';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const navLinks = [
+  const baseLinks = [
     { name: 'PRODUCTS', href: '/products' },
     { name: 'RECIPES', href: '/recipes' },
     { name: 'BLOG', href: '/blog' },
     { name: 'OUR STORY', href: '/our-story' }
   ];
+
+  const navLinks = location.pathname !== '/' 
+    ? [{ name: 'HOME', href: '/' }, ...baseLinks]
+    : baseLinks;
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
