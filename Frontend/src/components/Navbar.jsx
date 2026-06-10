@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: 'PRODUCTS', href: '/products' },
     { name: 'RECIPES', href: '/recipes' },
     { name: 'BLOG', href: '/blog' },
-    { name: 'OUR STORY', href: '/#our-story' }
+    { name: 'OUR STORY', href: '/our-story' }
   ];
 
   const toggleMobileMenu = () => {

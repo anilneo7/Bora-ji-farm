@@ -7,6 +7,7 @@ import ProductsPage from './components/ProductsPage'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import BlogComingSoon from './components/BlogComingSoon'
 import RecipesPage from './components/RecipesPage'
+import OurStoryPage from './components/OurStoryPage'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/blog" element={<BlogComingSoon />} />
           <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/our-story" element={<OurStoryPage />} />
         </Routes>
         <Footer />
       </div>

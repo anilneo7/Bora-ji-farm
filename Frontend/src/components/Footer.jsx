@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   const companyLinks = [
-    { name: 'Our Story', href: '#story' },
+    { name: 'Our Story', href: '/our-story' },
     { name: 'Careers', href: '#careers' },
     { name: 'Press', href: '#press' },
     { name: 'Partners', href: '#partners' }
