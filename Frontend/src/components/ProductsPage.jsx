@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Button from './Button';
 import { FaStar, FaTruck, FaLeaf, FaWhatsapp, FaStore } from 'react-icons/fa';
 import './ProductsPage.css';
+import farmImage from '../assets/farm_image.PNG';
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -119,6 +120,7 @@ const ProductsPage = () => {
               </p>
             </div>
             <div className="products-page__hero-image">
+              <img src={farmImage} alt="Bora Ji Farm" className="products-page__hero-img" />
               <div className="products-page__hero-glass-card">
                 <FaLeaf className="products-page__hero-glass-icon" />
                 <span className="products-page__hero-glass-text">100% Organic Farm</span>
