@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './OurStoryPage.css';
 import farmImage from '../assets/farm_image.PNG';
+import picture1 from '../assets/picture1.png';
 import { FaGraduationCap, FaSeedling, FaUsers, FaHeart, FaLeaf } from 'react-icons/fa';
 
 // Custom Hook for Scroll Reveal
@@ -96,6 +97,32 @@ const OurStoryPage = () => {
           <span>Discover</span>
           <div className="story-hero__mouse">
             <div className="story-hero__wheel"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Highlight Section */}
+      <section className="founder-highlight-section">
+        <div className="founder-highlight-container glass-panel">
+          <div className="founder-highlight-glow"></div>
+          <div className="founder-highlight-layout">
+            <div className="founder-highlight-image-column">
+              <div className="founder-highlight-image-wrapper">
+                <img src={picture1} alt="Owner & CEO" className="founder-highlight-image" />
+              </div>
+            </div>
+            <div className="founder-highlight-content">
+              <p className="founder-highlight-role">Owner & CEO</p>
+              <h2 className="founder-highlight-name">Ganesh Singh Bora</h2>
+              <h3 className="founder-highlight-title">The Visionary Behind Bora Ji Farms</h3>
+              <div className="founder-highlight-divider"></div>
+              <p className="founder-highlight-bio">
+                Driven by a deep passion for sustainable agriculture and community empowerment, our founder built Bora Ji Farms from the ground up. 
+              </p>
+              <p className="founder-highlight-bio">
+                Leaving behind a corporate career to return to the roots of Uttarakhand, the vision was clear: to create a thriving farm that prioritizes quality, freshness, and generating local employment. Today, that vision is a reality, delivering the finest products straight to your table while transforming the local community.
+              </p>
+            </div>
           </div>
         </div>
       </section>

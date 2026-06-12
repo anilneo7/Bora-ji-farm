@@ -76,9 +76,9 @@ const Slider = () => {
                       if (slide.buttonText === 'EXPLORE PRODUCTS') {
                         navigate('/products');
                       } else if (slide.buttonText === 'OUR STORY') {
-                        navigate('/#our-story');
+                        navigate('/our-story');
                       } else if (slide.buttonText === 'VIEW RECIPES') {
-                        navigate('/#recipes');
+                        navigate('/recipes');
                       } else {
                         console.log(`${slide.buttonText} clicked`);
                       }

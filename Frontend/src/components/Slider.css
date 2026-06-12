@@ -25,10 +25,14 @@
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .slider__slide--active {
   opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
 }
 
 .slider__image {
