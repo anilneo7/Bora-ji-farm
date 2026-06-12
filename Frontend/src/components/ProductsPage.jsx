@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Button from './Button';
 import { FaStar, FaTruck, FaLeaf, FaWhatsapp, FaStore } from 'react-icons/fa';
@@ -100,9 +101,8 @@ const ProductsPage = () => {
       {/* Breadcrumb Navigation */}
       <nav className="products-page__breadcrumb">
         <div className="products-page__breadcrumb-container">
-          <a href="#home" className="products-page__breadcrumb-link">Home</a>
+          <Link to="/" className="products-page__breadcrumb-link">Home</Link>
           <span className="products-page__breadcrumb-separator">/</span>
-          <a href="#products" className="products-page__breadcrumb-link">Products</a>
         </div>
       </nav>
       
