@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import brandLogo from '../assets/Bora ji farmlogo.png';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const topLinks = [
     // { name: 'FOODSERVICE', href: '/#foodservice' },
-    { name: 'FACTS', href: 'https://en.wikipedia.org/wiki/Eggs_as_food' },
+    { name: t('footer.facts'), href: 'https://en.wikipedia.org/wiki/Eggs_as_food' },
     {
-      name: 'JOBS',
+      name: t('footer.jobs'),
       href: '#',
       onClick: (e) => {
         e.preventDefault();
@@ -18,7 +21,7 @@ const Footer = () => {
       }
     },
     {
-      name: 'CONTACT US',
+      name: t('footer.contact'),
       href: '#',
       onClick: (e) => {
         e.preventDefault();
@@ -27,41 +30,6 @@ const Footer = () => {
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
       }
     }
-  ];
-
-  const quickLinks = [
-    { name: 'About Us', href: '/#about' },
-    { name: 'Products', href: '/products' },
-    { name: 'Recipes', href: '/#recipes' },
-    { name: 'Sustainability', href: '/#sustainability' }
-  ];
-
-  const supportLinks = [
-    { name: 'Customer Service', href: '#customer-service' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Shipping Info', href: '#shipping' },
-    { name: 'Returns', href: '#returns' }
-  ];
-
-  const companyLinks = [
-    { name: 'Our Story', href: '/our-story' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Press', href: '#press' },
-    { name: 'Partners', href: '#partners' }
-  ];
-
-  const interestLinks = [
-    { name: 'Easy Oven-Baked Chicken Breasts', href: '#oven-baked' },
-    { name: 'Top 10 Chicken Breast Recipes', href: '#recipes' },
-    { name: 'Speedy Turkey Chili', href: '#turkey-chili' },
-    { name: 'Grilled Chicken Marinades', href: '#marinades' },
-    { name: 'Healthy Chicken Meal Prep', href: '#meal-prep' },
-    { name: 'Family Dinner Ideas', href: '#dinner-ideas' }
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'WE DO NOT SELL OR SHARE YOUR PERSONAL INFORMATION' },
   ];
 
   const socialLinks = [
@@ -109,50 +77,74 @@ const Footer = () => {
 
         {/* Newsletter Section */}
         <div className="footer__newsletter">
-          <h3 className="footer__newsletter-title">Send a Query</h3>
+          <h3 className="footer__newsletter-title">{t('footer.queryTitle')}</h3>
           <p className="footer__newsletter-description">
-            Have questions about our products? Send us a direct message on WhatsApp!
+            {t('footer.queryDesc')}
           </p>
           <form className="footer__newsletter-form" onSubmit={handleNewsletterSubmit}>
             <input
               type="text"
               id="whatsappQuery"
-              placeholder="Enter your query here"
+              placeholder={t('footer.queryPlaceholder')}
               className="footer__newsletter-input"
               required
             />
             <button type="submit" className="footer__newsletter-button">
-              <FaWhatsapp style={{ fontSize: '1.2rem' }} /> SEND VIA WHATSAPP
+              <FaWhatsapp style={{ fontSize: '1.2rem' }} /> {t('footer.queryBtn')}
             </button>
           </form>
         </div>
 
         {/* Bottom Section */}
         <div className="footer__bottom">
-          <div className="footer__legal">
-            <ul className="footer__legal-list">
-              {legalLinks.map((link) => (
-                <li key={link.name}>
-                  {link.href && link.href.startsWith('/') ? (
-                    <Link to={link.href} className="footer__legal-link">
-                      {link.name}
-                    </Link>
-                  ) : (
-                    <a href={link.href} className="footer__legal-link">
-                      {link.name}
-                    </a>
-                  )}
-                </li>
-              ))}
+          <div className="footer-links">
+            <h4 className="footer-heading">{t('footer.facts')}</h4>
+            <ul>
+              <li><Link to="/about">{t('footer.aboutUs')}</Link></li>
+              <li><Link to="/products">{t('footer.products')}</Link></li>
+              <li><Link to="/recipes">{t('footer.recipes')}</Link></li>
+              <li><Link to="/sustainability">{t('footer.sustainability')}</Link></li>
+            </ul>
+          </div>
+          
+          <div className="footer-links">
+            <h4 className="footer-heading">{t('footer.contact')}</h4>
+            <ul>
+              <li><Link to="/contact">{t('footer.customerService')}</Link></li>
+              <li><Link to="/faq">{t('footer.faq')}</Link></li>
+              <li><Link to="/shipping">{t('footer.shippingInfo')}</Link></li>
+              <li><Link to="/returns">{t('footer.returns')}</Link></li>
+            </ul>
+          </div>
+          
+          <div className="footer-links">
+            <h4 className="footer-heading">{t('footer.aboutUs')}</h4>
+            <ul>
+              <li><Link to="/our-story">{t('footer.ourStory')}</Link></li>
+              <li><Link to="/careers">{t('footer.careers')}</Link></li>
+              <li><Link to="/press">{t('footer.press')}</Link></li>
+              <li><Link to="/partners">{t('footer.partners')}</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-links quick-recipes">
+            <h4 className="footer-heading">{t('footer.recipes')}</h4>
+            <ul>
+              <li><Link to="/recipes/oven-baked-chicken">{t('footer.quickLink1')}</Link></li>
+              <li><Link to="/recipes/top-10">{t('footer.quickLink2')}</Link></li>
+              <li><Link to="/recipes/turkey-chili">{t('footer.quickLink3')}</Link></li>
+              <li><Link to="/recipes/marinades">{t('footer.quickLink4')}</Link></li>
+              <li><Link to="/recipes/meal-prep">{t('footer.quickLink5')}</Link></li>
+              <li><Link to="/recipes/family-dinner">{t('footer.quickLink6')}</Link></li>
             </ul>
           </div>
 
           <div className="footer__copyright">
-            <p>© 2026 BORA JI FARMS. All Rights Reserved.</p>
+            <p>{t('footer.rights')}</p>
           </div>
 
           <div className="footer__creator">
-            <span className="footer__creator-text">Created by</span>
+            <span className="footer__creator-text">{t('footer.createdBy')}</span>
             <a
               href="https://www.linkedin.com/in/anil-mehra-engineer/"
               target="_blank"
@@ -164,7 +156,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__social">
-            <span className="footer__social-title">Follow Us:</span>
+            <span className="footer__social-title">{t('footer.followUs')}</span>
             <div className="footer__social-links">
               {socialLinks.map((social) => (
                 <a

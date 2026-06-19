@@ -1,33 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from './Button';
+import { useTranslation } from 'react-i18next';
 import './Slider.css';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
+  const { t } = useTranslation();
   
   const slides = [
     {
       id: 1,
       image: '/src/assets/farmSlider1.png',
-      title: 'Quality Poultry Products',
-      subtitle: 'Farm-fresh goodness delivered to your table',
-      buttonText: 'EXPLORE PRODUCTS'
+      title: t('slider.slide1.title'),
+      subtitle: t('slider.slide1.subtitle'),
+      buttonText: t('slider.slide1.btn'),
+      action: 'EXPLORE PRODUCTS'
     },
     {
       id: 2,
       image: '/src/assets/farmSlider2.png',
-      title: 'Sustainable Farming Practices',
-      subtitle: 'Committed to animal welfare and environmental stewardship',
-      buttonText: 'OUR STORY'
+      title: t('slider.slide2.title'),
+      subtitle: t('slider.slide2.subtitle'),
+      buttonText: t('slider.slide2.btn'),
+      action: 'OUR STORY'
     },
     {
       id: 3,
       image: '/src/assets/farmSlider3.png',
-      title: 'Delicious Recipes & Ideas',
-      subtitle: 'Discover amazing ways to enjoy our premium products',
-      buttonText: 'VIEW RECIPES'
+      title: t('slider.slide3.title'),
+      subtitle: t('slider.slide3.subtitle'),
+      buttonText: t('slider.slide3.btn'),
+      action: 'VIEW RECIPES'
     }
   ];
 
@@ -73,14 +78,14 @@ const Slider = () => {
                     variant="primary" 
                     size="large"
                     onClick={() => {
-                      if (slide.buttonText === 'EXPLORE PRODUCTS') {
+                      if (slide.action === 'EXPLORE PRODUCTS') {
                         navigate('/products');
-                      } else if (slide.buttonText === 'OUR STORY') {
+                      } else if (slide.action === 'OUR STORY') {
                         navigate('/our-story');
-                      } else if (slide.buttonText === 'VIEW RECIPES') {
+                      } else if (slide.action === 'VIEW RECIPES') {
                         navigate('/recipes');
                       } else {
-                        console.log(`${slide.buttonText} clicked`);
+                        console.log(`${slide.action} clicked`);
                       }
                     }}
                   >

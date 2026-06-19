@@ -1,122 +1,114 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import Button from './Button';
-import { FaStar, FaTruck, FaLeaf, FaWhatsapp, FaStore } from 'react-icons/fa';
+import { FaWhatsapp, FaLeaf, FaTruck, FaShieldAlt, FaStar } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import './ProductsPage.css';
 import farmImage from '../assets/farm_image.PNG';
 
 const ProductsPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('All');
+  const { t } = useTranslation();
 
-  const categories = [
-    { id: 'all', name: 'All Products' },
-    { id: 'eggs', name: 'Fresh Eggs' },
-    { id: 'chicken', name: 'Poultry' }
-  ];
+  const categories = ['All', 'Fresh Eggs', 'Poultry'];
 
   const products = [
     {
       id: 1,
-      name: 'FRESH EGGS',
-      category: 'eggs',
-      description: 'Premium quality farm-fresh eggs from free-range chickens',
-      price: '₹60/dozen',
-      image: '/src/assets/FRESH_EGGS.jpg',
-      rating: 4.8,
-      inStock: true,
-      badge: 'BESTSELLER'
+      name: t('productsPage.items.1.name'),
+      category: 'Fresh Eggs',
+      description: t('productsPage.items.1.desc'),
+      price: '₹120 / Dozen',
+      image: '/src/assets/eggphoto.jpg',
+      badge: t('productsPage.items.1.badge'),
+      inStock: true
     },
     {
       id: 2,
-      name: 'BROILER CHICKEN',
-      category: 'chicken',
-      description: 'High-quality broiler chicken, tender and perfect for roasting or grilling',
-      price: '₹150/kg',
-      image: '/src/assets/Broiler_chicken.jpg',
-      rating: 4.7,
-      inStock: true,
-      badge: 'FRESH'
+      name: t('productsPage.items.2.name'),
+      category: 'Poultry',
+      description: t('productsPage.items.2.desc'),
+      price: '₹220 / Kg',
+      image: '/src/assets/chicken.jpg',
+      badge: t('productsPage.items.2.badge'),
+      inStock: true
     },
     {
       id: 3,
-      name: 'ORGANIC EGGS',
-      category: 'eggs',
-      description: 'Certified organic eggs from pasture-raised chickens',
-      price: '₹80/dozen',
+      name: t('productsPage.items.3.name'),
+      category: 'Fresh Eggs',
+      description: t('productsPage.items.3.desc'),
+      price: '₹180 / Dozen',
       image: '/src/assets/eggphoto.jpg',
-      rating: 4.9,
-      inStock: true,
-      badge: 'ORGANIC'
+      badge: t('productsPage.items.3.badge'),
+      inStock: true
     },
     {
       id: 4,
-      name: 'LAYER CHICKEN',
-      category: 'chicken',
-      description: 'Farm-raised layer chicken, ideal for traditional recipes and soup stocks',
-      price: '₹200/each',
-      image: '/src/assets/layer_chicken.jpg',
-      rating: 4.5,
-      inStock: true,
-      badge: 'POPULAR'
+      name: t('productsPage.items.4.name'),
+      category: 'Poultry',
+      description: t('productsPage.items.4.desc'),
+      price: '₹280 / Kg',
+      image: '/src/assets/chicken.jpg',
+      badge: t('productsPage.items.4.badge'),
+      inStock: true
     },
     {
       id: 5,
-      name: 'BROWN EGGS',
-      category: 'eggs',
-      description: 'Nutrient-rich brown eggs from heritage breed chickens',
-      price: '₹75/dozen',
-      image: '/src/assets/BROWN_EGGS.jpg',
-      rating: 4.5,
-      inStock: true,
-      badge: 'HERITAGE'
+      name: t('productsPage.items.5.name'),
+      category: 'Fresh Eggs',
+      description: t('productsPage.items.5.desc'),
+      price: '₹150 / Dozen',
+      image: '/src/assets/eggphoto.jpg',
+      badge: t('productsPage.items.5.badge'),
+      inStock: true
     },
     {
       id: 6,
-      name: 'KADAKNATH CHICKEN',
-      category: 'chicken',
-      description: 'Famous black chicken breed, highly valued for its rich nutritional and medicinal qualities',
-      price: '₹550/each',
-      image: '/src/assets/Kadaknath_chicken.jpg',
-      rating: 4.9,
-      inStock: true,
-      badge: 'EXOTIC'
+      name: t('productsPage.items.6.name'),
+      category: 'Poultry',
+      description: t('productsPage.items.6.desc'),
+      price: '₹950 / Kg',
+      image: '/src/assets/kadaknath.webp',
+      badge: t('productsPage.items.6.badge'),
+      inStock: true
     }
   ];
 
-  const filteredProducts = selectedCategory === 'all' 
+  const filteredProducts = activeCategory === 'All' 
     ? products 
-    : products.filter(product => product.category === selectedCategory);
+    : products.filter(product => product.category === activeCategory);
 
-  const handleInquiry = (product) => {
+  const handleInquiry = (productName) => {
     const whatsappNumber = '918700304693';
-    const message = encodeURIComponent(`Hi, I'm interested in ${product.name}. Is it available?`);
+    const message = encodeURIComponent(`Hi, I'm interested in ${productName}. Is it available?`);
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
   return (
     <div className="products-page">
-      {/* <Navbar /> */}
-      
-      {/* Breadcrumb Navigation */}
       <nav className="products-page__breadcrumb">
         <div className="products-page__breadcrumb-container">
-          <Link to="/" className="products-page__breadcrumb-link">Home</Link>
-          <span className="products-page__breadcrumb-separator">/</span>
+          <ul className="breadcrumb-list">
+            <li><a href="/">{t('productsPage.breadcrumbHome')}</a></li>
+            <li className="separator">/</li>
+            <li className="active">{t('productsPage.breadcrumbProducts')}</li>
+          </ul>
         </div>
       </nav>
       
       <main className="products-page__main">
-        {/* Hero Section */}
         <section className="products-page__hero">
           <div className="products-page__hero-content">
-            <div className="products-page__hero-text">
-              <h1 className="products-page__hero-title">
-                Our Premium Farm Products
-              </h1>
-              <p className="products-page__hero-description">
-                From farm-fresh eggs to premium poultry, discover the finest quality products 
-                straight from our family farm to your table.
+            <div className="hero-content text-center">
+              <div className="hero-badge">
+                <FaLeaf className="badge-icon" />
+                <span>{t('productsPage.organicBadge')}</span>
+              </div>
+              <h1 className="hero-title">{t('productsPage.heroTitle')}</h1>
+              <p className="hero-description">
+                {t('productsPage.heroDesc')}
               </p>
             </div>
             <div className="products-page__hero-image">
@@ -129,29 +121,33 @@ const ProductsPage = () => {
           </div>
         </section>
 
-        {/* Categories Section */}
-        <section className="products-page__categories">
-          <div className="products-page__categories-container">
-            <h2 className="products-page__section-title">Shop by Category</h2>
-            <div className="products-page__category-tabs">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  className={`products-page__category-tab ${selectedCategory === category.id ? 'products-page__category-tab--active' : ''}`}
-                  onClick={() => setSelectedCategory(category.id)}
-                >
-                  {category.name}
-                </button>
-              ))}
+        <section className="category-filter-section">
+          <div className="container">
+            <h2 className="section-title">{t('productsPage.shopByCategory')}</h2>
+            <div className="category-filters">
+              {categories.map(category => {
+                let displayedCategory = category;
+                if (category === 'All') displayedCategory = t('productsPage.allProducts');
+                else if (category === 'Fresh Eggs') displayedCategory = t('productsPage.freshEggs');
+                else if (category === 'Poultry') displayedCategory = t('productsPage.poultry');
+                return (
+                  <button
+                    key={category}
+                    className={`category-btn ${activeCategory === category ? 'active' : ''}`}
+                    onClick={() => setActiveCategory(category)}
+                  >
+                    {displayedCategory}
+                  </button>
+                )
+              })}
             </div>
           </div>
         </section>
 
-        {/* Products Grid */}
         <section className="products-page__products">
           <div className="products-page__products-container">
-            <p className="products-page__disclaimer">
-              * Note: The prices listed below are approximate and may vary. Please confirm the final price when making an inquiry on WhatsApp.
+            <p className="products-disclaimer">
+              {t('productsPage.disclaimer')}
             </p>
             <div className="products-page__products-grid">
               {filteredProducts.map((product) => (
@@ -163,10 +159,6 @@ const ProductsPage = () => {
                       className="products-page__product-image"
                     />
                     <div className="products-page__product-badge">{product.badge}</div>
-                    <div className="products-page__product-rating">
-                      <FaStar className="products-page__rating-star" />
-                      <span>{product.rating}</span>
-                    </div>
                   </div>
                   
                   <div className="products-page__product-content">
@@ -174,26 +166,24 @@ const ProductsPage = () => {
                     <p className="products-page__product-description">{product.description}</p>
                     
                     <div className="products-page__product-meta">
-                      <div className="products-page__product-price">
-                        <span className="products-page__price-label">Price</span>
-                        <span className="products-page__price-value">{product.price}</span>
-                      </div>
-                      
-                      <div className="products-page__product-stock">
-                        <span className={`products-page__stock-status ${!product.inStock ? 'products-page__stock-status--out' : ''}`}>
-                          {product.inStock ? 'In Stock' : 'Out of Stock'}
+                      <div className="product-price-row">
+                        <div className="price-info">
+                          <span className="price-label">{t('productsPage.priceLabel')}</span>
+                          <span className="price-value">{product.price}</span>
+                        </div>
+                        <span className={`stock-status ${product.inStock ? 'in-stock' : 'out-of-stock'}`}>
+                          {product.inStock ? t('productsPage.inStock') : t('productsPage.outOfStock')}
                         </span>
                       </div>
-                    </div>
-                    
-                    <div className="products-page__product-actions">
-                      <button
-                        className="products-page__inquiry-btn"
-                        onClick={() => handleInquiry(product)}
+                      
+                      <Button 
+                        variant="primary" 
+                        className="inquire-btn"
+                        onClick={() => handleInquiry(product.name)}
                       >
-                        <FaWhatsapp className="products-page__btn-icon" />
-                        Inquire on WhatsApp
-                      </button>
+                        <FaWhatsapp className="btn-icon" />
+                        {t('productsPage.inquireBtn')}
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -202,44 +192,36 @@ const ProductsPage = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="products-page__features">
-          <div className="products-page__features-container">
-            <h2 className="products-page__section-title">Why Choose Our Products?</h2>
-            <div className="products-page__features-grid">
-              <div className="products-page__feature-card">
-                <div className="products-page__feature-icon">
-                  <FaTruck />
+        <section className="why-choose-section">
+          <div className="container">
+            <h2 className="section-title text-center">{t('productsPage.whyChooseTitle')}</h2>
+            <div className="features-grid">
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <FaTruck className="feature-icon" />
                 </div>
-                <h3 className="products-page__feature-title">Free Delivery</h3>
-                <p className="products-page__feature-description">
-                  Free delivery on orders over $50 within 20 miles radius
-                </p>
+                <h3>{t('productsPage.features.freeDelivery.title')}</h3>
+                <p>{t('productsPage.features.freeDelivery.desc')}</p>
               </div>
-              
-              <div className="products-page__feature-card">
-                <div className="products-page__feature-icon">
-                  <FaStar />
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <FaShieldAlt className="feature-icon" />
                 </div>
-                <h3 className="products-page__feature-title">Quality Guaranteed</h3>
-                <p className="products-page__feature-description">
-                  100% satisfaction guarantee on all our farm products
-                </p>
+                <h3>{t('productsPage.features.qualityGuaranteed.title')}</h3>
+                <p>{t('productsPage.features.qualityGuaranteed.desc')}</p>
               </div>
-              
-              <div className="products-page__feature-card">
-                <div className="products-page__feature-icon">
-                  <FaStore />
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <FaStar className="feature-icon" />
                 </div>
-                <h3 className="products-page__feature-title">Farm Fresh</h3>
-                <p className="products-page__feature-description">
-                  All products are harvested and delivered fresh daily
-                </p>
+                <h3>{t('productsPage.features.farmFresh.title')}</h3>
+                <p>{t('productsPage.features.farmFresh.desc')}</p>
               </div>
             </div>
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

@@ -3,9 +3,11 @@ import Slider from './Slider'
 import ProductsSection from './ProductsSection'
 import brandLogo from '../assets/Bora ji farmlogo.png'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 function HomePage() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleVisitStore = () => {
     const element = document.getElementById('location-card');
@@ -46,26 +48,26 @@ function HomePage() {
             </div>
             <div className="brand-hero__content">
               <div className="brand-hero__badge">
-                <span>EST. 2020</span>
+                <span>{t('home.est')}</span>
               </div>
               <h1 className="brand-hero__title">
-                Welcome to <span className="brand-highlight">BORA JI FARMS</span>
+                {t('home.welcome')} <span className="brand-highlight">{t('home.brand')}</span>
               </h1>
               <p className="brand-hero__subtitle">
-                Premium quality poultry products with farm-fresh goodness
+                {t('home.subtitle')}
               </p>
               <div className="brand-hero__cta">
                 <button 
                   className="brand-hero__btn primary"
                   onClick={() => navigate('/products')}
                 >
-                  EXPLORE PRODUCTS
+                  {t('home.exploreBtn')}
                 </button>
                 <button 
                   className="brand-hero__btn secondary"
                   onClick={handleVisitStore}
                 >
-                  VISIT STORE
+                  {t('home.visitBtn')}
                 </button>
               </div>
             </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './BlogComingSoon.css';
 
 const BlogComingSoon = () => {
+  const { t } = useTranslation();
   return (
     <div className="coming-soon-wrapper">
       <div className="coming-soon-clean-card">
@@ -15,15 +17,15 @@ const BlogComingSoon = () => {
         </div>
         
         <div className="coming-soon-content">
-          <h1 className="elegant-heading">Our Blog is Sprouting</h1>
-          <p>We are cultivating fresh stories, recipes, and insights straight from the farm. Something beautiful is growing here.</p>
+          <h1 className="elegant-heading">{t('blog.title')}</h1>
+          <p>{t('blog.desc')}</p>
           
           <div className="coming-soon-actions">
             <Link to="/" className="btn-clean primary">
-              <span className="btn-text">Return Home</span>
+              <span className="btn-text">{t('blog.homeBtn')}</span>
             </Link>
             <Link to="/products" className="btn-clean secondary">
-              <span className="btn-text">Shop Fresh</span>
+              <span className="btn-text">{t('blog.shopBtn')}</span>
             </Link>
           </div>
         </div>

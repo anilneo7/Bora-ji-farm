@@ -1,0 +1,332 @@
+{
+  "nav": {
+    "home": "HOME",
+    "products": "PRODUCTS",
+    "recipes": "RECIPES",
+    "blog": "BLOG",
+    "story": "OUR STORY",
+    "brand": "BORA JI FARMS",
+    "translateToHindi": "Translate website to Hindi",
+    "translateToEnglish": "Translate website to English"
+  },
+  "home": {
+    "est": "EST. 2020",
+    "welcome": "Welcome to",
+    "brand": "BORA JI FARMS",
+    "subtitle": "Premium quality poultry products with farm-fresh goodness",
+    "exploreBtn": "EXPLORE PRODUCTS",
+    "visitBtn": "VISIT STORE"
+  },
+  "slider": {
+    "slide1": {
+      "title": "Quality Poultry Products",
+      "subtitle": "Farm-fresh goodness delivered to your table",
+      "btn": "EXPLORE PRODUCTS"
+    },
+    "slide2": {
+      "title": "Sustainable Farming Practices",
+      "subtitle": "Committed to animal welfare and environmental stewardship",
+      "btn": "OUR STORY"
+    },
+    "slide3": {
+      "title": "Delicious Recipes & Ideas",
+      "subtitle": "Discover amazing ways to enjoy our premium products",
+      "btn": "VIEW RECIPES"
+    }
+  },
+  "productsSection": {
+    "subtitle": "our products",
+    "title": "From fresh whole chickens to ready-to-eat meals.",
+    "desc": "We have your perfect protein.",
+    "viewAll": "VIEW ALL PRODUCTS",
+    "product1": {
+      "name": "Premium Farm Eggs",
+      "desc": "Nutritious, high-quality eggs sourced from happy, free-range hens."
+    },
+    "product2": {
+      "name": "Fresh Whole Chicken",
+      "desc": "Hygienically processed, tender, and naturally raised chicken."
+    },
+    "inquireNow": "Inquire Now →",
+    "visitBadge": "Visit Our Sanctuary",
+    "visitTitlePart1": "Come Experience",
+    "visitTitlePart2": "Pure Freshness",
+    "visitDesc": "Nestled in the heart of Uttarakhand, BORA JI FARMS is more than just a farm. It's a testament to our commitment to nature, quality, and sustainable living.",
+    "location": {
+      "title": "Our Location",
+      "desc": "5 Mins from Someshwar Market, Uttarakhand",
+      "btn": "Get Directions"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "desc": "Mon - Sun: 08:00 AM - 06:00 PM",
+      "badge": "Always Open"
+    },
+    "contact": {
+      "title": "Contact Us"
+    },
+    "chatBtn": "CHAT ON WHATSAPP",
+    "map": {
+      "title": "Find Us on the Map",
+      "desc": "Explore our lush green fields and experience the farm life firsthand.",
+      "btn": "OPEN IN GOOGLE MAPS"
+    }
+  },
+  "productsPage": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProducts": "Products",
+    "heroTitle": "Our Premium Farm Products",
+    "heroDesc": "From farm-fresh eggs to premium poultry, discover the finest quality products straight from our family farm to your table.",
+    "organicBadge": "100% Organic Farm",
+    "shopByCategory": "Shop by Category",
+    "allProducts": "All Products",
+    "freshEggs": "Fresh Eggs",
+    "poultry": "Poultry",
+    "disclaimer": "* Note: The prices listed below are approximate and may vary. Please confirm the final price when making an inquiry on WhatsApp.",
+    "priceLabel": "Price",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "inquireBtn": "Inquire on WhatsApp",
+    "whyChooseTitle": "Why Choose Our Products?",
+    "features": {
+      "freeDelivery": {
+        "title": "Free Delivery",
+        "desc": "Free delivery on orders over $50 within 20 miles radius"
+      },
+      "qualityGuaranteed": {
+        "title": "Quality Guaranteed",
+        "desc": "100% satisfaction guarantee on all our farm products"
+      },
+      "farmFresh": {
+        "title": "Farm Fresh",
+        "desc": "All products are harvested and delivered fresh daily"
+      }
+    },
+    "items": {
+      "1": {
+        "name": "FRESH EGGS",
+        "desc": "Premium quality farm-fresh eggs from free-range chickens",
+        "badge": "BESTSELLER"
+      },
+      "2": {
+        "name": "BROILER CHICKEN",
+        "desc": "High-quality broiler chicken, tender and perfect for roasting or grilling",
+        "badge": "FRESH"
+      },
+      "3": {
+        "name": "ORGANIC EGGS",
+        "desc": "Certified organic eggs from pasture-raised chickens",
+        "badge": "ORGANIC"
+      },
+      "4": {
+        "name": "LAYER CHICKEN",
+        "desc": "Farm-raised layer chicken, ideal for traditional recipes and soup stocks",
+        "badge": "POPULAR"
+      },
+      "5": {
+        "name": "BROWN EGGS",
+        "desc": "Nutrient-rich brown eggs from heritage breed chickens",
+        "badge": "HERITAGE"
+      },
+      "6": {
+        "name": "KADAKNATH CHICKEN",
+        "desc": "Famous black chicken breed, highly valued for its rich nutritional and medicinal qualities",
+        "badge": "EXOTIC"
+      }
+    }
+  },
+  "recipes": {
+    "heroTitle": "Farm Fresh Recipes",
+    "heroDesc": "Discover the true taste of our farm with these specially curated, authentic recipes bringing the best out of our ingredients.",
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "viewFullRecipe": "View Full Recipe",
+    "hideRecipeDetails": "Hide Recipe Details",
+    "items": {
+      "egg-curry": {
+        "title": "Classic Dhaba Egg Curry",
+        "desc": "A comforting, spicy, and rich egg curry made exactly how you find it at highway dhabas. Perfect with hot rotis.",
+        "tag": "Indian Classic",
+        "ingr": [
+          "4 Hard-boiled Farm Eggs",
+          "2 large Onions, finely chopped",
+          "2 Tomatoes, pureed",
+          "1 tbsp Ginger-Garlic paste",
+          "1 tsp Garam Masala",
+          "Fresh Coriander"
+        ],
+        "steps": [
+          "Sauté onions until golden brown.",
+          "Add ginger-garlic paste and tomato puree. Cook until oil separates.",
+          "Add spices and simmer with a little water.",
+          "Score the eggs, add to gravy, and simmer for 5 mins. Garnish with coriander."
+        ]
+      },
+      "anda-bhurji": {
+        "title": "Masala Anda Bhurji",
+        "desc": "The ultimate Indian scrambled eggs. Quick, fiery, and bursting with flavors of fresh onions and green chilies.",
+        "tag": "Quick Breakfast",
+        "ingr": [
+          "3 Farm-fresh Eggs",
+          "1 Onion, finely chopped",
+          "1 Tomato, finely chopped",
+          "2 Green Chilies",
+          "1/2 tsp Turmeric",
+          "Butter"
+        ],
+        "steps": [
+          "Melt butter in a pan, sauté onions and green chilies.",
+          "Add tomatoes and spices, cook until soft.",
+          "Whisk eggs and pour into the pan.",
+          "Stir continuously on medium heat until scrambled and cooked. Serve hot."
+        ]
+      },
+      "butter-chicken": {
+        "title": "Traditional Murgh Makhani",
+        "desc": "Authentic Butter Chicken with tender pieces of chicken in a velvety, mildly spiced tomato and butter sauce.",
+        "tag": "Mughlai",
+        "ingr": [
+          "500g Chicken, marinated",
+          "2 cups Tomato Puree",
+          "1/2 cup Heavy Cream",
+          "3 tbsp Butter",
+          "1 tbsp Kasuri Methi",
+          "Spices (Cumin, Coriander, Chili)"
+        ],
+        "steps": [
+          "Grill or pan-fry the marinated chicken until cooked.",
+          "In a separate pan, melt butter and cook tomato puree with spices.",
+          "Simmer until thick, then stir in heavy cream and kasuri methi.",
+          "Add chicken pieces, simmer for 5 mins, and serve with naan."
+        ]
+      },
+      "pahadi-chicken": {
+        "title": "Authentic Pahadi Chicken",
+        "desc": "A green, aromatic chicken curry from the mountains, made with fresh coriander, mint, garlic, and green chilies.",
+        "tag": "Pahadi Style",
+        "ingr": [
+          "500g Chicken",
+          "1 cup Fresh Coriander",
+          "1/2 cup Fresh Mint",
+          "6 Cloves Garlic",
+          "4 Green Chilies",
+          "1/2 cup Yogurt"
+        ],
+        "steps": [
+          "Blend coriander, mint, garlic, and chilies into a fine green paste.",
+          "Marinate chicken in yogurt and half the green paste.",
+          "Heat oil, add whole spices, and sauté the remaining green paste.",
+          "Add chicken, cook slowly on low heat until tender. Serve with rice."
+        ]
+      },
+      "kadaknath-curry": {
+        "title": "Rich Kadaknath Curry",
+        "desc": "A deeply flavorful, slow-cooked dark meat curry known for its intense taste and incredibly high nutritional value.",
+        "tag": "Exotic Kadaknath",
+        "ingr": [
+          "500g Kadaknath Chicken",
+          "3 Onions, thinly sliced",
+          "2 Tomatoes, chopped",
+          "Whole Spices (Cloves, Cinnamon, Cardamom)",
+          "2 tbsp Mustard Oil",
+          "Ginger-Garlic Paste"
+        ],
+        "steps": [
+          "Heat mustard oil and crackle whole spices.",
+          "Brown the onions deeply, then add ginger-garlic paste.",
+          "Add Kadaknath chicken and sear well on high heat.",
+          "Add tomatoes and spices, cover, and slow cook for 45-60 minutes until tender."
+        ]
+      },
+      "herb-roast-chicken": {
+        "title": "Classic Herb-Roasted Chicken",
+        "desc": "A western favorite. Juicy, tender whole chicken roasted perfectly with fresh farm herbs, garlic, and butter.",
+        "tag": "Western Classic",
+        "ingr": [
+          "1 Whole Farm Chicken",
+          "Fresh Rosemary & Thyme",
+          "1 head of Garlic, halved",
+          "1 Lemon, halved",
+          "4 tbsp Butter, softened",
+          "Sea Salt & Black Pepper"
+        ],
+        "steps": [
+          "Preheat oven to 200°C (400°F). Pat the chicken dry with paper towels.",
+          "Rub softened butter, salt, and herbs under the skin and all over the chicken.",
+          "Stuff the cavity with lemon and garlic halves.",
+          "Roast for about 1 hour and 15 minutes, basting halfway, until golden brown and cooked through."
+        ]
+      }
+    }
+  },
+  "story": {
+    "heroTitle": "Our Story",
+    "heroDesc": "From Corporate Boardrooms to Lush Green Fields",
+    "discover": "Discover",
+    "role": "Owner & CEO",
+    "name": "Ganesh Singh Bora",
+    "title": "The Visionary Behind Bora Ji Farms",
+    "bio1": "Driven by a deep passion for sustainable agriculture and community empowerment, our founder built Bora Ji Farms from the ground up.",
+    "bio2": "Leaving behind a corporate career to return to the roots of Uttarakhand, the vision was clear: to create a thriving farm that prioritizes quality, freshness, and generating local employment. Today, that vision is a reality, delivering the finest products straight to your table while transforming the local community.",
+    "corpTitle": "The Corporate Years",
+    "corpDesc": "Armed with an MBA and big dreams, the journey began in the fast-paced corporate world. For over five years, the focus was on spreadsheets, meetings, and climbing the corporate ladder. While successful, there was always a yearning for something more meaningful—something closer to home and nature.",
+    "rootsTitle": "Return to Roots",
+    "rootsDesc": "The turning point came when the realization dawned that true wealth isn't just financial. Leaving behind a lucrative corporate career, the decision was made to return to Uttarakhand. The goal? To start a farm that prioritizes quality, freshness, and sustainable practices.",
+    "missionTitle": "Empowering the Community",
+    "missionDesc": "Bora Ji Farms is more than just an agricultural enterprise. It was born out of a deep desire to cure the unemployment problem in Uttarakhand. By generating local employment and teaching modern farming techniques, we are building a thriving community and empowering our people.",
+    "promiseTitle": "Our Promise to You",
+    "promiseDesc": "Today, our farm stands as a testament to hard work and vision. We are committed to providing you with the freshest, highest-quality poultry and farm products, delivered straight from our family farm to your table. When you choose Bora Ji Farms, you aren't just buying food; you're supporting a dream and a community."
+  },
+  "blog": {
+    "title": "Our Blog is Sprouting",
+    "desc": "We are cultivating fresh stories, recipes, and insights straight from the farm. Something beautiful is growing here.",
+    "homeBtn": "Return Home",
+    "shopBtn": "Shop Fresh"
+  },
+  "footer": {
+    "facts": "FACTS",
+    "jobs": "JOBS",
+    "contact": "CONTACT US",
+    "aboutUs": "About Us",
+    "products": "Products",
+    "recipes": "Recipes",
+    "sustainability": "Sustainability",
+    "customerService": "Customer Service",
+    "faq": "FAQ",
+    "shippingInfo": "Shipping Info",
+    "returns": "Returns",
+    "ourStory": "Our Story",
+    "careers": "Careers",
+    "press": "Press",
+    "partners": "Partners",
+    "quickLink1": "Easy Oven-Baked Chicken Breasts",
+    "quickLink2": "Top 10 Chicken Breast Recipes",
+    "quickLink3": "Speedy Turkey Chili",
+    "quickLink4": "Grilled Chicken Marinades",
+    "quickLink5": "Healthy Chicken Meal Prep",
+    "quickLink6": "Family Dinner Ideas",
+    "privacy": "Privacy Policy",
+    "doNotSell": "WE DO NOT SELL OR SHARE YOUR PERSONAL INFORMATION",
+    "queryTitle": "Send a Query",
+    "queryDesc": "Have questions about our products? Send us a direct message on WhatsApp!",
+    "queryPlaceholder": "Enter your query here",
+    "queryBtn": "SEND VIA WHATSAPP",
+    "rights": "© 2026 BORA JI FARMS. All Rights Reserved.",
+    "createdBy": "Created by",
+    "followUs": "Follow Us:"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: June 2026",
+    "sec1Title": "1. Introduction",
+    "sec1Desc": "Welcome to Bora Ji Farms. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.",
+    "sec2Title": "2. No Data Collection",
+    "sec2Desc1": "We do not collect, store, or process any personal data from our users.",
+    "sec2Desc2": "Bora Ji Farms is designed to provide information about our products and services without requiring you to share any personal information. When you browse our website, we do not use cookies or any other tracking technologies to gather personal data, identity data, contact data, or technical data.",
+    "sec3Title": "3. Use of Data",
+    "sec3Desc": "Because we do not collect any personal data, we do not use, share, or sell your information to any third parties under any circumstances. Your privacy is fully guaranteed while browsing our site.",
+    "sec4Title": "4. Contact Us",
+    "sec4Desc": "If you have any questions about this privacy policy or our privacy practices, please contact us at:",
+    "contactName": "Bora Ji Farms"
+  }
+}
