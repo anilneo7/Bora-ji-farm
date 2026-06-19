@@ -2,32 +2,29 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { FaMapMarkerAlt, FaClock, FaPhone, FaMap } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
 import './ProductsSection.css';
 
 const ProductsSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
-  
   const products = [
     {
       id: 1,
-      category: t('productsPage.items.1.name'),
-      name: t('productsSection.product1.name'),
-      description: t('productsSection.product1.desc'),
+      category: 'FRESH EGGS',
+      name: 'Premium Farm Eggs',
+      description: 'Nutritious, high-quality eggs sourced from happy, free-range hens.',
       price: '₹120 / Dozen',
       image: '/src/assets/eggphoto.jpg',
-      whatsAppMsg: `Hello Bora Ji Farms! I would like to inquire about your ${t('productsSection.product1.name')}.`
+      whatsAppMsg: 'Hello Bora Ji Farms! I would like to inquire about your Premium Farm Eggs.'
     },
     {
       id: 2,
-      category: t('productsPage.items.2.name'),
-      name: t('productsSection.product2.name'),
-      description: t('productsSection.product2.desc'),
+      category: 'FRESH CHICKEN',
+      name: 'Fresh Whole Chicken',
+      description: 'Hygienically processed, tender, and naturally raised chicken.',
       price: '₹220 / Kg',
       image: '/src/assets/chicken.jpg',
       customStyle: { '--img-rotate': '90deg', '--img-scale': '0.80' },
-      whatsAppMsg: `Hello Bora Ji Farms! I would like to inquire about your ${t('productsSection.product2.name')}.`
+      whatsAppMsg: 'Hello Bora Ji Farms! I would like to inquire about your Farm-Fresh Chicken.'
     }
   ];
 
@@ -45,12 +42,12 @@ const ProductsSection = () => {
         <div className="products-section__container">
           <div className="products-section__content">
             <div className="products-section__header">
-              <span className="products-section__subtitle">{t('productsSection.subtitle')}</span>
+              <span className="products-section__subtitle">our products</span>
               <h1 className="products-section__title">
-                {t('productsSection.title')}
+                From fresh whole chickens to ready-to-eat meals.
               </h1>
               <p className="products-section__description">
-                {t('productsSection.desc')}
+                We have your perfect protein.
               </p>
             </div>
 
@@ -61,7 +58,7 @@ const ProductsSection = () => {
                 onClick={() => navigate('/products')}
                 className="products-section__main-button"
               >
-                {t('productsSection.viewAll')}
+                VIEW ALL PRODUCTS
               </Button>
             </div>
           </div>
@@ -89,7 +86,8 @@ const ProductsSection = () => {
                   <h3 className="product-card__title">{product.name}</h3>
                   <p className="product-card__description">{product.description}</p>
                   <div className="product-card__footer">
-                    <span className="product-card__cta">{t('productsSection.inquireNow')}</span>
+                    {/* <span className="product-card__price">{product.price}</span> */}
+                    <span className="product-card__cta">Inquire Now <span className="arrow">→</span></span>
                   </div>
                 </div>
               </div>
@@ -112,13 +110,13 @@ const ProductsSection = () => {
           <div className="location-section__grid">
             <div className="location-section__content">
               <div className="location-section__header">
-                <span className="location-section__badge">{t('productsSection.visitBadge')}</span>
+                <span className="location-section__badge">Visit Our Sanctuary</span>
                 <h2 className="location-section__title">
-                  {t('productsSection.visitTitlePart1')} <br />
-                  <span className="text-highlight">{t('productsSection.visitTitlePart2')}</span>
+                  Come Experience <br />
+                  <span className="text-highlight">Pure Freshness</span>
                 </h2>
                 <p className="location-section__description">
-                  {t('productsSection.visitDesc')}
+                  Nestled in the heart of Uttarakhand, BORA JI FARMS is more than just a farm. It's a testament to our commitment to nature, quality, and sustainable living.
                 </p>
               </div>
 
@@ -128,10 +126,10 @@ const ProductsSection = () => {
                     <FaMapMarkerAlt />
                   </div>
                   <div className="location-detail-card__info">
-                    <h3>{t('productsSection.location.title')}</h3>
-                    <p>{t('productsSection.location.desc')}</p>
+                    <h3>Our Location</h3>
+                    <p>5 Mins from Someshwar Market, Uttarakhand</p>
                     <a href="https://maps.app.goo.gl/b7o1xnpL4JCS4eub8" target="_blank" rel="noopener noreferrer" className="location-link">
-                      {t('productsSection.location.btn')} <FaMap />
+                      Get Directions <FaMap />
                     </a>
                   </div>
                 </div>
@@ -141,9 +139,9 @@ const ProductsSection = () => {
                     <FaClock />
                   </div>
                   <div className="location-detail-card__info">
-                    <h3>{t('productsSection.hours.title')}</h3>
-                    <p>{t('productsSection.hours.desc')}</p>
-                    <span className="status-badge">{t('productsSection.hours.badge')}</span>
+                    <h3>Opening Hours</h3>
+                    <p>Mon - Sun: 08:00 AM - 06:00 PM</p>
+                    <span className="status-badge">Always Open</span>
                   </div>
                 </div>
 
@@ -152,7 +150,7 @@ const ProductsSection = () => {
                     <FaPhone />
                   </div>
                   <div className="location-detail-card__info">
-                    <h3>{t('productsSection.contact.title')}</h3>
+                    <h3>Contact Us</h3>
                     <p>+91 98765 43210</p>
                     <p className="email">info@borajifarms.com</p>
                   </div>
@@ -170,7 +168,7 @@ const ProductsSection = () => {
                   }}
                   className="location-cta-button"
                 >
-                  {t('productsSection.chatBtn')}
+                  CHAT ON WHATSAPP
                 </Button>
               </div>
             </div>
@@ -190,10 +188,10 @@ const ProductsSection = () => {
                   </div>
                 </div>
                 <div className="map-experience-card__content">
-                  <h4>{t('productsSection.map.title')}</h4>
-                  <p>{t('productsSection.map.desc')}</p>
+                  <h4>Find Us on the Map</h4>
+                  <p>Explore our lush green fields and experience the farm life firsthand.</p>
                   <Button variant="secondary" size="small" onClick={() => window.open('https://maps.app.goo.gl/b7o1xnpL4JCS4eub8', '_blank')}>
-                    {t('productsSection.map.btn')}
+                    OPEN IN GOOGLE MAPS
                   </Button>
                 </div>
               </div>

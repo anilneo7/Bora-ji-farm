@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import './OurStoryPage.css';
 import farmImage from '../assets/farm_image.PNG';
 import picture1 from '../assets/picture1.png';
@@ -43,7 +42,6 @@ const RevealSection = ({ children, className = '' }) => {
 };
 
 const OurStoryPage = () => {
-  const { t } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
 
   // Parallax and scroll progress
@@ -90,13 +88,13 @@ const OurStoryPage = () => {
           <div className="story-hero__overlay"></div>
         </div>
         <div className="story-hero__content">
-          <h1 className="story-hero__title">{t('story.heroTitle')}</h1>
-          <p className="story-hero__subtitle">{t('story.heroDesc')}</p>
+          <h1 className="story-hero__title">Our Story</h1>
+          <p className="story-hero__subtitle">From Corporate Boardrooms to Lush Green Fields</p>
         </div>
         
         {/* Scroll Indicator */}
         <div className="story-hero__scroll-indicator">
-          <span>{t('story.discover')}</span>
+          <span>Discover</span>
           <div className="story-hero__mouse">
             <div className="story-hero__wheel"></div>
           </div>
@@ -114,15 +112,15 @@ const OurStoryPage = () => {
               </div>
             </div>
             <div className="founder-highlight-content">
-              <p className="founder-highlight-role">{t('story.role')}</p>
-              <h2 className="founder-highlight-name">{t('story.name')}</h2>
-              <h3 className="founder-highlight-title">{t('story.title')}</h3>
+              <p className="founder-highlight-role">Owner & CEO</p>
+              <h2 className="founder-highlight-name">Ganesh Singh Bora</h2>
+              <h3 className="founder-highlight-title">The Visionary Behind Bora Ji Farms</h3>
               <div className="founder-highlight-divider"></div>
               <p className="founder-highlight-bio">
-                {t('story.bio1')}
+                Driven by a deep passion for sustainable agriculture and community empowerment, our founder built Bora Ji Farms from the ground up. 
               </p>
               <p className="founder-highlight-bio">
-                {t('story.bio2')}
+                Leaving behind a corporate career to return to the roots of Uttarakhand, the vision was clear: to create a thriving farm that prioritizes quality, freshness, and generating local employment. Today, that vision is a reality, delivering the finest products straight to your table while transforming the local community.
               </p>
             </div>
           </div>
@@ -143,9 +141,9 @@ const OurStoryPage = () => {
             <div className="story-card__icon-wrapper">
               <FaGraduationCap className="story-card__icon" />
             </div>
-            <h2 className="story-card__title">{t('story.corpTitle')}</h2>
+            <h2 className="story-card__title">The Corporate Years</h2>
             <p className="story-card__text">
-              {t('story.corpDesc')}
+              Armed with an MBA and big dreams, the journey began in the fast-paced corporate world. For over five years, the focus was on spreadsheets, meetings, and climbing the corporate ladder. While successful, there was always a yearning for something more meaningful—something closer to home and nature.
             </p>
           </div>
           <div className="story-timeline-dot"></div>
@@ -159,9 +157,9 @@ const OurStoryPage = () => {
             <div className="story-card__icon-wrapper">
               <FaSeedling className="story-card__icon" />
             </div>
-            <h2 className="story-card__title">{t('story.rootsTitle')}</h2>
+            <h2 className="story-card__title">Return to Roots</h2>
             <p className="story-card__text">
-              {t('story.rootsDesc')}
+              The turning point came when the realization dawned that true wealth isn't just financial. Leaving behind a lucrative corporate career, the decision was made to return to Uttarakhand. The goal? To start a farm that prioritizes quality, freshness, and sustainable practices.
             </p>
           </div>
         </RevealSection>
@@ -173,9 +171,9 @@ const OurStoryPage = () => {
             <div className="story-card__icon-wrapper">
               <FaUsers className="story-card__icon" />
             </div>
-            <h2 className="story-card__title">{t('story.missionTitle')}</h2>
+            <h2 className="story-card__title">Empowering the Community</h2>
             <p className="story-card__text">
-              {t('story.missionDesc')}
+              Bora Ji Farms is more than just an agricultural enterprise. It was born out of a deep desire to cure the unemployment problem in Uttarakhand. By generating local employment and teaching modern farming techniques, we are building a thriving community and empowering our people.
             </p>
           </div>
           <div className="story-timeline-dot"></div>
@@ -188,9 +186,9 @@ const OurStoryPage = () => {
             <div className="story-card__icon-wrapper">
               <FaHeart className="story-card__icon" />
             </div>
-            <h2 className="story-card__title">{t('story.promiseTitle')}</h2>
+            <h2 className="story-card__title">Our Promise to You</h2>
             <p className="story-card__text">
-              {t('story.promiseDesc')}
+              Today, our farm stands as a testament to hard work and vision. We are committed to providing you with the freshest, highest-quality poultry and farm products, delivered straight from our family farm to your table. When you choose Bora Ji Farms, you aren't just buying food; you're supporting a dream and a community.
             </p>
           </div>
         </RevealSection>
