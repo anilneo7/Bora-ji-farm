@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const topLinks = [
     // { name: 'FOODSERVICE', href: '/#foodservice' },
-    { name: 'FACTS', href: 'https://en.wikipedia.org/wiki/Eggs_as_food' },
+    { name: t('footer.facts'), href: 'https://en.wikipedia.org/wiki/Eggs_as_food' },
     {
-      name: 'JOBS',
+      name: t('footer.jobs'),
       href: '#',
       onClick: (e) => {
         e.preventDefault();
@@ -18,7 +21,7 @@ const Footer = () => {
       }
     },
     {
-      name: 'CONTACT US',
+      name: t('footer.contact'),
       href: '#',
       onClick: (e) => {
         e.preventDefault();
@@ -60,8 +63,8 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'WE DO NOT SELL OR SHARE YOUR PERSONAL INFORMATION' },
+    { name: t('footer.privacy'), href: '/privacy' },
+    { name: t('footer.doNotSell') },
   ];
 
   const socialLinks = [
@@ -109,20 +112,20 @@ const Footer = () => {
 
         {/* Newsletter Section */}
         <div className="footer__newsletter">
-          <h3 className="footer__newsletter-title">Send a Query</h3>
+          <h3 className="footer__newsletter-title">{t('footer.queryTitle')}</h3>
           <p className="footer__newsletter-description">
-            Have questions about our products? Send us a direct message on WhatsApp!
+            {t('footer.queryDesc')}
           </p>
           <form className="footer__newsletter-form" onSubmit={handleNewsletterSubmit}>
             <input
               type="text"
               id="whatsappQuery"
-              placeholder="Enter your query here"
+              placeholder={t('footer.queryPlaceholder')}
               className="footer__newsletter-input"
               required
             />
             <button type="submit" className="footer__newsletter-button">
-              <FaWhatsapp style={{ fontSize: '1.2rem' }} /> SEND VIA WHATSAPP
+              <FaWhatsapp style={{ fontSize: '1.2rem' }} /> {t('footer.queryBtn')}
             </button>
           </form>
         </div>
@@ -148,11 +151,11 @@ const Footer = () => {
           </div>
 
           <div className="footer__copyright">
-            <p>© 2026 BORA JI FARMS. All Rights Reserved.</p>
+            <p>{t('footer.rights')}</p>
           </div>
 
           <div className="footer__creator">
-            <span className="footer__creator-text">Created by</span>
+            <span className="footer__creator-text">{t('footer.createdBy')}</span>
             <a
               href="https://www.linkedin.com/in/anil-mehra-engineer/"
               target="_blank"
@@ -164,7 +167,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__social">
-            <span className="footer__social-title">Follow Us:</span>
+            <span className="footer__social-title">{t('footer.followUs')}</span>
             <div className="footer__social-links">
               {socialLinks.map((social) => (
                 <a

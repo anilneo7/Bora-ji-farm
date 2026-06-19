@@ -2,26 +2,28 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import logoImage from '../assets/Bora ji farmlogo.png';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('EN');
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'EN' ? 'HI' : 'EN');
+    const newLang = i18n.language === 'EN' ? 'HI' : 'EN';
+    i18n.changeLanguage(newLang);
   };
 
   const baseLinks = [
-    { name: 'PRODUCTS', href: '/products' },
-    { name: 'RECIPES', href: '/recipes' },
-    { name: 'BLOG', href: '/blog' },
-    { name: 'OUR STORY', href: '/our-story' }
+    { name: t('nav.products'), href: '/products' },
+    { name: t('nav.recipes'), href: '/recipes' },
+    { name: t('nav.blog'), href: '/blog' },
+    { name: t('nav.story'), href: '/our-story' }
   ];
 
   const navLinks = location.pathname !== '/' 
-    ? [{ name: 'HOME', href: '/' }, ...baseLinks]
+    ? [{ name: t('nav.home'), href: '/' }, ...baseLinks]
     : baseLinks;
 
   const toggleMobileMenu = () => {
@@ -61,11 +63,11 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__actions">
-          <div className="navbar__lang-wrapper" title={language === 'EN' ? "Translate website to Hindi" : "Translate website to English"} onClick={toggleLanguage}>
+          <div className="navbar__lang-wrapper" title={i18n.language === 'EN' ? t('nav.translateToHindi') : t('nav.translateToEnglish')} onClick={toggleLanguage}>
             <div className="navbar__lang-toggle" aria-label="Toggle Language">
-              <div className={`navbar__lang-slider ${language === 'HI' ? 'right' : 'left'}`}></div>
-              <span className={`navbar__lang-option ${language === 'EN' ? 'active' : ''}`}>ENG</span>
-              <span className={`navbar__lang-option ${language === 'HI' ? 'active' : ''}`}>हिंदी</span>
+              <div className={`navbar__lang-slider ${i18n.language === 'HI' ? 'right' : 'left'}`}></div>
+              <span className={`navbar__lang-option ${i18n.language === 'EN' ? 'active' : ''}`}>ENG</span>
+              <span className={`navbar__lang-option ${i18n.language === 'HI' ? 'active' : ''}`}>हिंदी</span>
             </div>
           </div>
           {/* <Button variant="primary" size="medium" onClick={() => console.log('Where to buy clicked')}>

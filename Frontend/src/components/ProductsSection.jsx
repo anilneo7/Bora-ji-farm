@@ -2,25 +2,27 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { FaMapMarkerAlt, FaClock, FaPhone, FaMap } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import './ProductsSection.css';
 
 const ProductsSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const products = [
     {
       id: 1,
-      category: 'FRESH EGGS',
-      name: 'Premium Farm Eggs',
-      description: 'Nutritious, high-quality eggs sourced from happy, free-range hens.',
+      category: t('home.products.1.category'),
+      name: t('home.products.1.name'),
+      description: t('home.products.1.desc'),
       price: '₹120 / Dozen',
       image: '/src/assets/eggphoto.jpg',
       whatsAppMsg: 'Hello Bora Ji Farms! I would like to inquire about your Premium Farm Eggs.'
     },
     {
       id: 2,
-      category: 'FRESH CHICKEN',
-      name: 'Fresh Whole Chicken',
-      description: 'Hygienically processed, tender, and naturally raised chicken.',
+      category: t('home.products.2.category'),
+      name: t('home.products.2.name'),
+      description: t('home.products.2.desc'),
       price: '₹220 / Kg',
       image: '/src/assets/chicken.jpg',
       customStyle: { '--img-rotate': '90deg', '--img-scale': '0.80' },
@@ -42,12 +44,12 @@ const ProductsSection = () => {
         <div className="products-section__container">
           <div className="products-section__content">
             <div className="products-section__header">
-              <span className="products-section__subtitle">our products</span>
+              <span className="products-section__subtitle">{t('home.sectionSubtitle')}</span>
               <h1 className="products-section__title">
-                From fresh whole chickens to ready-to-eat meals.
+                {t('home.sectionTitle')}
               </h1>
               <p className="products-section__description">
-                We have your perfect protein.
+                {t('home.sectionDesc')}
               </p>
             </div>
 
@@ -58,7 +60,7 @@ const ProductsSection = () => {
                 onClick={() => navigate('/products')}
                 className="products-section__main-button"
               >
-                VIEW ALL PRODUCTS
+                {t('home.viewAllProducts')}
               </Button>
             </div>
           </div>
@@ -87,7 +89,7 @@ const ProductsSection = () => {
                   <p className="product-card__description">{product.description}</p>
                   <div className="product-card__footer">
                     {/* <span className="product-card__price">{product.price}</span> */}
-                    <span className="product-card__cta">Inquire Now <span className="arrow">→</span></span>
+                    <span className="product-card__cta">{t('home.inquireNow')} <span className="arrow">→</span></span>
                   </div>
                 </div>
               </div>
@@ -110,13 +112,13 @@ const ProductsSection = () => {
           <div className="location-section__grid">
             <div className="location-section__content">
               <div className="location-section__header">
-                <span className="location-section__badge">Visit Our Sanctuary</span>
+                <span className="location-section__badge">{t('home.visitSanctuary')}</span>
                 <h2 className="location-section__title">
-                  Come Experience <br />
-                  <span className="text-highlight">Pure Freshness</span>
+                  {t('home.comeExperience')} <br />
+                  <span className="text-highlight">{t('home.pureFreshness')}</span>
                 </h2>
                 <p className="location-section__description">
-                  Nestled in the heart of Uttarakhand, BORA JI FARMS is more than just a farm. It's a testament to our commitment to nature, quality, and sustainable living.
+                  {t('home.locationDesc')}
                 </p>
               </div>
 
@@ -126,10 +128,10 @@ const ProductsSection = () => {
                     <FaMapMarkerAlt />
                   </div>
                   <div className="location-detail-card__info">
-                    <h3>Our Location</h3>
-                    <p>5 Mins from Someshwar Market, Uttarakhand</p>
+                    <h3>{t('home.ourLocation')}</h3>
+                    <p>{t('home.locationAddress')}</p>
                     <a href="https://maps.app.goo.gl/b7o1xnpL4JCS4eub8" target="_blank" rel="noopener noreferrer" className="location-link">
-                      Get Directions <FaMap />
+                      {t('home.getDirections')} <FaMap />
                     </a>
                   </div>
                 </div>
@@ -139,9 +141,9 @@ const ProductsSection = () => {
                     <FaClock />
                   </div>
                   <div className="location-detail-card__info">
-                    <h3>Opening Hours</h3>
-                    <p>Mon - Sun: 08:00 AM - 06:00 PM</p>
-                    <span className="status-badge">Always Open</span>
+                    <h3>{t('home.openingHours')}</h3>
+                    <p>{t('home.hoursDetail')}</p>
+                    <span className="status-badge">{t('home.alwaysOpen')}</span>
                   </div>
                 </div>
 
@@ -150,7 +152,7 @@ const ProductsSection = () => {
                     <FaPhone />
                   </div>
                   <div className="location-detail-card__info">
-                    <h3>Contact Us</h3>
+                    <h3>{t('home.contactUs')}</h3>
                     <p>+91 98765 43210</p>
                     <p className="email">info@borajifarms.com</p>
                   </div>
@@ -168,7 +170,7 @@ const ProductsSection = () => {
                   }}
                   className="location-cta-button"
                 >
-                  CHAT ON WHATSAPP
+                  {t('home.chatOnWhatsapp')}
                 </Button>
               </div>
             </div>
@@ -188,10 +190,10 @@ const ProductsSection = () => {
                   </div>
                 </div>
                 <div className="map-experience-card__content">
-                  <h4>Find Us on the Map</h4>
-                  <p>Explore our lush green fields and experience the farm life firsthand.</p>
+                  <h4>{t('home.findOnMap')}</h4>
+                  <p>{t('home.mapDesc')}</p>
                   <Button variant="secondary" size="small" onClick={() => window.open('https://maps.app.goo.gl/b7o1xnpL4JCS4eub8', '_blank')}>
-                    OPEN IN GOOGLE MAPS
+                    {t('home.openInGoogleMaps')}
                   </Button>
                 </div>
               </div>
