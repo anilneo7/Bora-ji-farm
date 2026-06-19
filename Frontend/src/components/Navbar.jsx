@@ -6,7 +6,12 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('EN');
   const location = useLocation();
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'EN' ? 'HI' : 'EN');
+  };
 
   const baseLinks = [
     { name: 'PRODUCTS', href: '/products' },
@@ -56,6 +61,13 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__actions">
+          <div className="navbar__lang-wrapper" title={language === 'EN' ? "Translate website to Hindi" : "Translate website to English"} onClick={toggleLanguage}>
+            <div className="navbar__lang-toggle" aria-label="Toggle Language">
+              <div className={`navbar__lang-slider ${language === 'HI' ? 'right' : 'left'}`}></div>
+              <span className={`navbar__lang-option ${language === 'EN' ? 'active' : ''}`}>ENG</span>
+              <span className={`navbar__lang-option ${language === 'HI' ? 'active' : ''}`}>हिंदी</span>
+            </div>
+          </div>
           {/* <Button variant="primary" size="medium" onClick={() => console.log('Where to buy clicked')}>
             WHERE TO BUY
           </Button> */}
