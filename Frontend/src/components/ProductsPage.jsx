@@ -91,7 +91,7 @@ const ProductsPage = () => {
     : products.filter(product => product.category === selectedCategory);
 
   const handleInquiry = (product) => {
-    const whatsappNumber = '918700304693';
+    const whatsappNumber = '918285762242';
     const message = encodeURIComponent(`Hi, I'm interested in ${product.name}. Is it available?`);
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };

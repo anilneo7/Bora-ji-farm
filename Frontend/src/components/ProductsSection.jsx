@@ -71,7 +71,7 @@ const ProductsSection = () => {
                 key={product.id}
                 className="product-card"
                 onClick={() => {
-                  const phoneNumber = "918700304693";
+                  const phoneNumber = "918285762242";
                   window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(product.whatsAppMsg)}`, "_blank");
                 }}
               >
@@ -164,7 +164,7 @@ const ProductsSection = () => {
                   variant="primary"
                   size="large"
                   onClick={() => {
-                    const phoneNumber = "918700304693";
+                    const phoneNumber = "918285762242";
                     const message = "Hello Bora Ji Farms! I would like to inquire about your products.";
                     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
                   }}

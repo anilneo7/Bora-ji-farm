@@ -15,7 +15,7 @@ const Footer = () => {
       href: '#',
       onClick: (e) => {
         e.preventDefault();
-        const phoneNumber = "918700304693";
+        const phoneNumber = "918285762242";
         const message = "Hello Bora Ji Farms! I am interested in joining your team. Could you please share more details about current job openings?";
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
       }
@@ -25,7 +25,7 @@ const Footer = () => {
       href: '#',
       onClick: (e) => {
         e.preventDefault();
-        const phoneNumber = "918700304693";
+        const phoneNumber = "918285762242";
         const message = "Hello Bora Ji Farms! I would like to inquire about your products.";
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
       }
@@ -68,15 +68,15 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '', icon: <FaFacebook /> },
-    { name: 'Instagram', href: '#instagram', icon: <FaInstagram /> },
-    { name: 'LinkedIn', href: '#linkedin', icon: <FaLinkedin /> }
+    { name: 'Facebook', href: 'https://www.facebook.com/ganesh.singh.14473', icon: <FaFacebook /> },
+    { name: 'Instagram', href: 'https://www.instagram.com/', icon: <FaInstagram /> },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/anil-mehra-engineer/', icon: <FaLinkedin /> }
   ];
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     const query = e.target.elements.whatsappQuery.value;
-    const phoneNumber = "918700304693";
+    const phoneNumber = "918285762242";
     const message = `Hello Bora Ji Farms! ${query}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
     e.target.reset();

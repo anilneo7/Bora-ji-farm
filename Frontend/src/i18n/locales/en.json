@@ -15,7 +15,39 @@
     "brand": "BORA JI FARMS",
     "subtitle": "Premium quality poultry products with farm-fresh goodness",
     "exploreBtn": "EXPLORE PRODUCTS",
-    "visitBtn": "VISIT STORE"
+    "visitBtn": "VISIT STORE",
+    "sectionSubtitle": "our products",
+    "sectionTitle": "From fresh whole chickens to ready-to-eat meals.",
+    "sectionDesc": "We have your perfect protein.",
+    "viewAllProducts": "VIEW ALL PRODUCTS",
+    "products": {
+      "1": {
+        "category": "FRESH EGGS",
+        "name": "Premium Farm Eggs",
+        "desc": "Nutritious, high-quality eggs sourced from happy, free-range hens."
+      },
+      "2": {
+        "category": "FRESH CHICKEN",
+        "name": "Fresh Whole Chicken",
+        "desc": "Hygienically processed, tender, and naturally raised chicken."
+      }
+    },
+    "inquireNow": "Inquire Now",
+    "visitSanctuary": "Visit Our Sanctuary",
+    "comeExperience": "Come Experience",
+    "pureFreshness": "Pure Freshness",
+    "locationDesc": "Nestled in the heart of Uttarakhand, BORA JI FARMS is more than just a farm. It's a testament to our commitment to nature, quality, and sustainable living.",
+    "ourLocation": "Our Location",
+    "locationAddress": "5 Mins from Someshwar Market, Uttarakhand",
+    "getDirections": "Get Directions",
+    "openingHours": "Opening Hours",
+    "hoursDetail": "Mon - Sun: 08:00 AM - 06:00 PM",
+    "alwaysOpen": "Always Open",
+    "contactUs": "Contact Us",
+    "chatOnWhatsapp": "CHAT ON WHATSAPP",
+    "findOnMap": "Find Us on the Map",
+    "mapDesc": "Explore our lush green fields and experience the farm life firsthand.",
+    "openInGoogleMaps": "OPEN IN GOOGLE MAPS"
   },
   "slider": {
     "slide1": {
@@ -32,44 +64,6 @@
       "title": "Delicious Recipes & Ideas",
       "subtitle": "Discover amazing ways to enjoy our premium products",
       "btn": "VIEW RECIPES"
-    }
-  },
-  "productsSection": {
-    "subtitle": "our products",
-    "title": "From fresh whole chickens to ready-to-eat meals.",
-    "desc": "We have your perfect protein.",
-    "viewAll": "VIEW ALL PRODUCTS",
-    "product1": {
-      "name": "Premium Farm Eggs",
-      "desc": "Nutritious, high-quality eggs sourced from happy, free-range hens."
-    },
-    "product2": {
-      "name": "Fresh Whole Chicken",
-      "desc": "Hygienically processed, tender, and naturally raised chicken."
-    },
-    "inquireNow": "Inquire Now →",
-    "visitBadge": "Visit Our Sanctuary",
-    "visitTitlePart1": "Come Experience",
-    "visitTitlePart2": "Pure Freshness",
-    "visitDesc": "Nestled in the heart of Uttarakhand, BORA JI FARMS is more than just a farm. It's a testament to our commitment to nature, quality, and sustainable living.",
-    "location": {
-      "title": "Our Location",
-      "desc": "5 Mins from Someshwar Market, Uttarakhand",
-      "btn": "Get Directions"
-    },
-    "hours": {
-      "title": "Opening Hours",
-      "desc": "Mon - Sun: 08:00 AM - 06:00 PM",
-      "badge": "Always Open"
-    },
-    "contact": {
-      "title": "Contact Us"
-    },
-    "chatBtn": "CHAT ON WHATSAPP",
-    "map": {
-      "title": "Find Us on the Map",
-      "desc": "Explore our lush green fields and experience the farm life firsthand.",
-      "btn": "OPEN IN GOOGLE MAPS"
     }
   },
   "productsPage": {
@@ -261,13 +255,13 @@
   },
   "story": {
     "heroTitle": "Our Story",
-    "heroDesc": "From Corporate Boardrooms to Lush Green Fields",
+    "heroSubtitle": "From Corporate Boardrooms to Lush Green Fields",
     "discover": "Discover",
-    "role": "Owner & CEO",
-    "name": "Ganesh Singh Bora",
-    "title": "The Visionary Behind Bora Ji Farms",
-    "bio1": "Driven by a deep passion for sustainable agriculture and community empowerment, our founder built Bora Ji Farms from the ground up.",
-    "bio2": "Leaving behind a corporate career to return to the roots of Uttarakhand, the vision was clear: to create a thriving farm that prioritizes quality, freshness, and generating local employment. Today, that vision is a reality, delivering the finest products straight to your table while transforming the local community.",
+    "ownerRole": "Owner & CEO",
+    "ownerName": "Ganesh Singh Bora",
+    "ownerTitle": "The Visionary Behind Bora Ji Farms",
+    "ownerBio1": "Driven by a deep passion for sustainable agriculture and community empowerment, our founder built Bora Ji Farms from the ground up.",
+    "ownerBio2": "Leaving behind a corporate career to return to the roots of Uttarakhand, the vision was clear: to create a thriving farm that prioritizes quality, freshness, and generating local employment. Today, that vision is a reality, delivering the finest products straight to your table while transforming the local community.",
     "corpTitle": "The Corporate Years",
     "corpDesc": "Armed with an MBA and big dreams, the journey began in the fast-paced corporate world. For over five years, the focus was on spreadsheets, meetings, and climbing the corporate ladder. While successful, there was always a yearning for something more meaningful—something closer to home and nature.",
     "rootsTitle": "Return to Roots",
