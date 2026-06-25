@@ -20,7 +20,7 @@ const Slider = () => {
     },
     {
       id: 2,
-      image: '/src/assets/farmSlider2.png',
+      image: '/src/assets/farmSlider2.jpeg',
       title: t('slider.slide2.title'),
       subtitle: t('slider.slide2.subtitle'),
       buttonText: t('slider.slide2.btn'),
@@ -28,7 +28,7 @@ const Slider = () => {
     },
     {
       id: 3,
-      image: '/src/assets/farmSlider3.png',
+      image: '/src/assets/farmSlider3.jpeg',
       title: t('slider.slide3.title'),
       subtitle: t('slider.slide3.subtitle'),
       buttonText: t('slider.slide3.btn'),

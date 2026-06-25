@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import './OurStoryPage.css';
-import farmImage from '../assets/farm_image.PNG';
-import picture1 from '../assets/picture1.png';
+import farmImage from '../assets/farm_image.jpeg';
+import picture1 from '../assets/picture1.jpeg';
 import { FaGraduationCap, FaSeedling, FaUsers, FaHeart, FaLeaf } from 'react-icons/fa';
 
 // Custom Hook for Scroll Reveal

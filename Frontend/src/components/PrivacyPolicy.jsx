@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
           </p>
           <div className="privacy-page__contact-info">
             <p><strong>Bora Ji Farms</strong></p>
-            <p>Email: support@borajifarms.com</p>
+            <p>Email: anilmehrar814@gmail.com</p>
             <p>Phone: +91 8285762242</p>
           </div>
         </section>

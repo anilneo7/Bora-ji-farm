@@ -154,7 +154,7 @@ const ProductsSection = () => {
                   <div className="location-detail-card__info">
                     <h3>{t('home.contactUs')}</h3>
                     <p>+91 98765 43210</p>
-                    <p className="email">info@borajifarms.com</p>
+                    <p className="email">anilmehrar814@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@ const ProductsSection = () => {
                 <div className="map-experience-card__image">
                   {/* This would ideally be a static map image or a beautiful farm photo */}
                   {/* <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000" alt="Farm Overview" /> */}
-                  <img src="./src/assets/farm_image.PNG" alt="Farm Overview" />
+                  <img src="./src/assets/farm_image.jpeg" alt="Farm Overview" />
                   <div className="map-experience-card__overlay">
                     <div className="ping-container">
                       <div className="ping"></div>

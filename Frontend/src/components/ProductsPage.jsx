@@ -5,7 +5,7 @@ import Button from './Button';
 import { FaStar, FaLeaf, FaWhatsapp } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './ProductsPage.css';
-import farmImage from '../assets/farm_image.PNG';
+import farmImage from '../assets/farm_image.jpeg';
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
