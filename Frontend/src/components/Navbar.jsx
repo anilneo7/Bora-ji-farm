@@ -49,11 +49,11 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <li key={link.name} className="navbar__nav-item">
                 {link.href.startsWith('/') && !link.href.includes('#') ? (
-                  <Link to={link.href} className="navbar__nav-link">
+                  <Link to={link.href} className="navbar__nav-link" onClick={() => setIsMobileMenuOpen(false)}>
                     {link.name}
                   </Link>
                 ) : (
-                  <a href={link.href} className="navbar__nav-link">
+                  <a href={link.href} className="navbar__nav-link" onClick={() => setIsMobileMenuOpen(false)}>
                     {link.name}
                   </a>
                 )}

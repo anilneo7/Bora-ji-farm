@@ -97,25 +97,7 @@ const Slider = () => {
           ))}
         </div>
 
-        <button 
-          className="slider__nav slider__nav--prev" 
-          onClick={prevSlide}
-          aria-label="Previous slide"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
 
-        <button 
-          className="slider__nav slider__nav--next" 
-          onClick={nextSlide}
-          aria-label="Next slide"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
 
         <div className="slider__dots">
           {slides.map((_, index) => (
