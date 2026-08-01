@@ -15,7 +15,7 @@ const ProductsSection = () => {
       name: t('home.products.1.name'),
       description: t('home.products.1.desc'),
       price: '₹120 / Dozen',
-      image: '/src/assets/eggphoto.jpg',
+      image: '/eggphoto.jpg',
       whatsAppMsg: 'Hello Bora Ji Farms! I would like to inquire about your Premium Farm Eggs.'
     },
     {
@@ -24,7 +24,7 @@ const ProductsSection = () => {
       name: t('home.products.2.name'),
       description: t('home.products.2.desc'),
       price: '₹220 / Kg',
-      image: '/src/assets/chicken.jpg',
+      image: '/chicken.jpg',
       customStyle: { '--img-rotate': '90deg', '--img-scale': '0.80' },
       whatsAppMsg: 'Hello Bora Ji Farms! I would like to inquire about your Farm-Fresh Chicken.'
     }
@@ -180,7 +180,7 @@ const ProductsSection = () => {
                 <div className="map-experience-card__image">
                   {/* This would ideally be a static map image or a beautiful farm photo */}
                   {/* <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000" alt="Farm Overview" /> */}
-                  <img src="./src/assets/farm_image.jpeg" alt="Farm Overview" />
+                  <img src="/farm_image.jpeg" alt="Farm Overview" />
                   <div className="map-experience-card__overlay">
                     <div className="ping-container">
                       <div className="ping"></div>

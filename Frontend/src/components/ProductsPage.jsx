@@ -24,7 +24,7 @@ const ProductsPage = () => {
       category: 'eggs',
       description: t('productsPage.items.1.desc'),
       price: '₹60/dozen',
-      image: '/src/assets/FRESH_EGGS.jpg',
+      image: '/FRESH_EGGS.jpg',
       rating: 4.8,
       inStock: true,
       badge: t('productsPage.items.1.badge')
@@ -35,7 +35,7 @@ const ProductsPage = () => {
       category: 'chicken',
       description: t('productsPage.items.2.desc'),
       price: '₹150/kg',
-      image: '/src/assets/Broiler_chicken.jpg',
+      image: '/Broiler_chicken.jpg',
       rating: 4.7,
       inStock: true,
       badge: t('productsPage.items.2.badge')
@@ -46,7 +46,7 @@ const ProductsPage = () => {
       category: 'eggs',
       description: t('productsPage.items.3.desc'),
       price: '₹80/dozen',
-      image: '/src/assets/eggphoto.jpg',
+      image: '/eggphoto.jpg',
       rating: 4.9,
       inStock: true,
       badge: t('productsPage.items.3.badge')
@@ -57,7 +57,7 @@ const ProductsPage = () => {
       category: 'chicken',
       description: t('productsPage.items.4.desc'),
       price: '₹200/each',
-      image: '/src/assets/layer_chicken.jpg',
+      image: '/layer_chicken.jpg',
       rating: 4.5,
       inStock: true,
       badge: t('productsPage.items.4.badge')
@@ -68,7 +68,7 @@ const ProductsPage = () => {
       category: 'eggs',
       description: t('productsPage.items.5.desc'),
       price: '₹75/dozen',
-      image: '/src/assets/BROWN_EGGS.jpg',
+      image: '/BROWN_EGGS.jpg',
       rating: 4.5,
       inStock: true,
       badge: t('productsPage.items.5.badge')
@@ -79,7 +79,7 @@ const ProductsPage = () => {
       category: 'chicken',
       description: t('productsPage.items.6.desc'),
       price: '₹550/each',
-      image: '/src/assets/Kadaknath_chicken.jpg',
+      image: '/Kadaknath_chicken.jpg',
       rating: 4.9,
       inStock: true,
       badge: t('productsPage.items.6.badge')
