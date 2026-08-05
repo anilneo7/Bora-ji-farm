@@ -41,7 +41,7 @@
     "locationAddress": "सोमेश्वर बाजार, उत्तराखंड से 5 मिनट की दूरी पर",
     "getDirections": "दिशा-निर्देश प्राप्त करें",
     "openingHours": "खुलने का समय",
-    "hoursDetail": "सोम - रवि: सुबह 08:00 - शाम 06:00",
+    "hoursDetail": "सोम - रवि: सुबह 07:00 - शाम 06:00",
     "alwaysOpen": "हमेशा खुला",
     "contactUs": "संपर्क करें",
     "chatOnWhatsapp": "व्हाट्सएप पर चैट करें",
@@ -66,7 +66,6 @@
       "btn": "रेसिपी देखें"
     }
   },
-
   "productsPage": {
     "organicFarm": "जैविक फार्म",
     "breadcrumbHome": "होम",
